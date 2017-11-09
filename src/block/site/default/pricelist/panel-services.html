@@ -1,0 +1,51 @@
+<div class="{{block_prefix}}block  {{bg_prefix}}block">	
+	<div class="container {{block_prefix}}container {{bg_prefix}}container">	
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/heading.html" 
+			header_prefix="page-header__" 
+			header_mod="is--center  is--panel"
+			header_level="h3"
+			header="{{block_heading}}"
+		]]
+		<div class="text__block  {{block_prefix}}text-block">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Маникюр</th>
+						<th class="is--center">Цена, <span class="is--ruble"></span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Классический маникюр (обрезной)</td>
+						<td class="is--center">1 000</td>
+					</tr>	
+					<tr>
+						<td>Классический при покрытии (лак\гель-лак)</td>
+						<td class="is--center">2 250</td>
+					</tr>		
+					<tr>				
+						<td>Европейский (необрезной)</td>
+						<td class="is--center">2 450</td>
+					</tr>
+					<tr>
+						<td>Европейский (необрезной)</td>
+						<td class="is--center">900</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html"
+		block_prefix="{{bg_prefix}}"
+		block_mod="is--tube-leaf  is--services" 
+		block_bg="bg-tube-leaf.png" 
+	]]	
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html"
+		block_prefix="{{bg_prefix}}"
+		block_mod="is--flover-syringes  is--services" 
+		block_bg="bg-flover-syringes.png" 
+	]]	
+</div>

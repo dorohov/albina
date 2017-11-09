@@ -1,0 +1,37 @@
+<div class="content-block {{block_prefix}}content-block  is--hidden" role="main">	
+	<div class="page-header-panel__block  {{block_mod}}">
+		<div class="page-header-panel__container container">
+			[[azbntple 
+				tpl="/src/block/site/default/breadcrumb/level1.html" 
+				bread_prefix="breadcrumb__"
+				bread_mod="is--heading  is--blue"
+				level_1="Акции" 
+			]]		
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/group.html" 
+				header_prefix="page-header__" 
+				header_mod="is--heading  is--blue  is--panel"
+				header_level="h1"
+				header="{{block_heading}}"
+				header_small_level="h3"
+				header_small="{{block_heading_small}}"
+			]]	
+		</div>	
+		[[azbntple 
+			tpl="/src/block/site/default/bg/round.html" 
+			block_prefix="bg-round__" 
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/bg/card-plane.html" 
+			block_prefix="bg-plane__"
+			block_mod="is--action  is--speed-55"  
+			block_bg="bg-plane-action.png"
+		]]	
+	</div>
+	<div class="container content-block__container {{block_prefix}}container  bg-header__container">
+		[[azbntple 
+			tpl="/src/block/site/default/action/panel.html"
+			block_prefix="action-panel__" 
+		]]
+	</div>	
+</div>

@@ -1,0 +1,38 @@
+<div class="content-block {{block_prefix}}content-block  {{bg_prefix}}block" role="main">	
+	<div class="container content-block__container {{block_prefix}}container {{bg_prefix}}container">
+		[[azbntple 
+			tpl="/src/block/site/default/breadcrumb/level2.html" 
+			bread_prefix="breadcrumb__"
+			bread_mod="is--heading  is--center"
+			level_1="Специалисты" 
+			level_1_link="{{page.team}}" 
+			level_2="{{block_heading}}" 
+		]]		
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/heading.html" 
+			header_prefix="page-header__" 
+			header_mod="is--heading  is--center"
+			header_level="h1"
+			header="{{block_heading}}"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/team/panel-card.html"
+			block_prefix="team-card-panel__" 
+			bg_prefix="{{bg_prefix}}"
+			bg_preview="{{bg_preview}}"
+		]]
+	</div>	
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html"
+		block_prefix="{{bg_prefix}}"
+		block_mod="is--flover-leaf  is--team-item" 
+		block_bg="bg-flover-leaf.png" 
+	]]
+</div>
+[[azbntple 
+	tpl="/src/block/site/default/blog/panel-index.html"
+	block_prefix="blog-panel__" 
+	block_mod="is--index" 
+	block_heading_mod="is--heading  is--center  is--blog-panel-index"
+	block_heading="Мнения наших специалистов"
+]]

@@ -1,0 +1,46 @@
+<div class="content-block {{prefix_block}}block  bg-pattern  is--wall  " role="main">
+	<div class="container content-block__container {{prefix_block}}container-top is--noheight"> 
+		[[azbntple 
+			tpl="/src/block/site/default/breadcrumb/level2.html" 
+			bread_prefix="breadcrumb__"
+			bread_mod="is--center"
+			level_1="Портфолио"
+			level_1_link="/portfolio.html"
+			level_2="Двухкомнатная квартира по адресу ул. Гагарина, 73"
+		]]			
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/heading.html" 
+			header_prefix="page-header__" 
+			header_mod="is--heading  is--center  is--portfolio"
+			header_level="h1"
+			header="Двухкомнатная квартира по адресу ул. Гагарина, 73"
+		]] 
+		[[azbntple 
+			tpl="/src/block/site/default/portfolio/navbar-card.html" 
+			block_prefix="portfolio-navbar__"
+		]]	
+	</div>
+	[[azbntple 
+		tpl="/src/block/site/default/portfolio/card-slider.html" 
+		block_prefix="portfolio-slider__"
+	]]	
+	<div class="container content-block__container {{prefix_block}}container-middle is--noheight"> 
+		[[azbntple 
+			tpl="/src/block/site/default/portfolio/card-panel.html" 
+			block_prefix="portfolio-card-panel__"
+		]]
+	</div>
+	[[azbntple 
+		tpl="/src/block/site/default/form/panel-consultation-min.html" 
+		form_prefix="form-panel__"
+		form_mod="is--consultation-min"
+		form_bg="bg-form-consultation-min.jpg"
+	]]	
+	<div class="container content-block__container {{prefix_block}}container-bottom is--noheight">
+		[[azbntple 
+			tpl="/src/block/site/default/portfolio/block-panel.html" 
+			block_prefix="portfolio-page-panel__"
+			block_heading="Другие проекты"
+		]]		
+	</div>
+</div>

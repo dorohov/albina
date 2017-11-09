@@ -1,0 +1,27 @@
+<div style="margin-bottom: 5vw;">	
+	[[azbntple 
+		tpl="/src/block/site/default/page-header/heading.html" 
+		header_prefix="page-header__" 
+		header_mod="is--heading  is--center"
+		header_level="h1"
+		header="{{block_heading}}"
+	]]	
+	<!-- ** 
+		префиксы:
+			= products-card__  				- для карточки
+			= products-panel__				- для панели
+			= products-panel-category__		- для панели категории
+	** -->
+	<div style="margin-bottom: 5vw;">	
+		[[azbntple 
+			tpl="/src/block/site/default/products/panel.html"
+			block_prefix="products-panel__" 
+		]]
+	</div>
+	<div style="margin-bottom: 5vw;">	
+		[[azbntple 
+			tpl="/src/block/site/default/products/panel-category.html"
+			block_prefix="products-panel-category__" 
+		]]
+	</div>
+</div>			

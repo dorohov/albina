@@ -1,0 +1,28 @@
+<div class="content-block {{block_prefix}}content-block  is--hidden" role="main">		
+	[[azbntple 
+		tpl="/src/block/site/default/page-header/heading-basket.html" 
+		header_prefix="page-header-panel__"
+		block_heading="{{block_heading}}"      
+		block_user="{{block_user}}"      
+		block_heading_small="{{block_heading_small}}"
+		block_mod="{{block_mod}}" 
+	]]				
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card-plane.html" 
+		block_prefix="bg-plane__"
+		block_mod="is--cabinet  is--speed-30"  
+		block_bg="bg-plane-calc-yellow.png"
+	]]	
+	<div class="container content-block__container {{block_prefix}}container  bg-header__container  is--padding-top">
+		[[azbntple 
+			tpl="/src/block/site/default/cabinet/panel-orders-all.html"
+			block_prefix="cabinet-panel__" 
+		]]
+	</div>			
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card-plane.html" 
+		block_prefix="bg-plane__"
+		block_mod="is--basket  is--speed-5"  
+		block_bg="bg-plane-basket-blue.png"
+	]]	
+</div>

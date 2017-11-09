@@ -1,0 +1,52 @@
+<div class="{{block_prefix}}block">
+	<h3 class="{{block_prefix}}heading  is--delivery">Выберите способ оплаты:</h3>
+	<ul class="{{block_prefix}}delivery-tabs">
+		[[azbntple 
+			tpl="/src/block/site/default/basket/card-delivery-tab.html"
+			block_prefix="orders-card__"
+			block_link="cash"
+			block_mod="  "
+			block_heading="Наличными"
+			block_note="В офисе"
+			block_icon="btn-icon-cash"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/basket/card-delivery-tab.html"
+			block_prefix="orders-card__"
+			block_link="checking"
+			block_mod="  "
+			block_heading="На расчетный счет"
+			block_note="Для юр. лиц"
+			block_icon="btn-icon-checking"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/basket/card-delivery-tab.html"
+			block_prefix="orders-card__"
+			block_link="оnline"
+			block_mod="  "
+			block_heading="Оплата оnline"
+			block_note="Со скидкой 3%"
+			block_icon="btn-icon-оnline"
+		]]
+	</ul>
+	<div class="{{block_prefix}}delivery-panes">
+		<div class="{{block_prefix}}delivery-pane" id="cash"></div>
+		<div class="{{block_prefix}}delivery-pane" id="checking">
+			[[azbntple 
+				tpl="/src/block/site/default/button/file-icon.html"
+				button_prefix="btn-link__" 
+				button_mod="is--icon  is--xs"
+				button_link="##"
+				button_name="Загрузить реквизиты"
+				button_icon="btn-icon-requisites"
+			]] 
+		</div>
+		<div class="{{block_prefix}}delivery-pane" id="оnline"></div>
+	</div>
+	[[azbntple 
+		tpl="/src/block/site/default/basket/panel-order-payment.html"
+		block_prefix="basket-orders__"
+		button_target="modal-payment"
+		block_link_name="Оформить заказ"
+	]]
+</div>

@@ -1,0 +1,70 @@
+.clients-panel__{
+	&panel{}
+	&block{}
+	&row{}
+	&cols{
+		@media @media-size-xs-l {
+			.makeCols(4, 12);
+		}
+		&.is--cols-screen-7{
+			@media @media-size-md {
+				.makeCols(12, 12);
+			}
+		}
+	}
+} 
+.clients-item__{
+	&card{
+		position: relative;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		&::before{
+			content: attr(data-heading);
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 5vw;
+			.calcFontSize(30, 84, 320, 1680);
+			.calcLineHeight(30, 84, 320, 1680);
+			font-weight: 700;
+			color: fadeout(@blue, 95%);
+		}
+	}
+	&row{
+		position: relative;
+		z-index: 2;
+		align-items: center;
+	}
+	&cols{
+
+	}
+	&preview{
+		max-width: 190px;
+		width: 11vw;
+		min-width: 100px;
+	}
+	&note{}
+	&heading{
+		.calcFontSize(22, 28, 320, 1680);
+		.calcLineHeight(24, 30, 320, 1680);
+		font-weight: 700;
+		margin-bottom: 0;
+	}
+	&text{
+		font-size: @b-fs - 2;
+		line-height: @b-lh - 4;
+		margin-bottom: 15px;
+	}
+	&sale{
+		color: @b-color-h;
+		span{
+			color: @b-color-a;
+			font-weight: 700;
+			.calcFontSize(30, 46, 320, 1680);
+			small{
+				.calcFontSize(24, 32, 320, 1680);
+				font-weight: 400;
+			}
+		}
+	}
+}

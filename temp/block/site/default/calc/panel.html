@@ -1,0 +1,66 @@
+<div class="{{block_prefix}}block">
+	<div class="{{block_prefix}}row row  is--gutter  is--wrap">
+		<div class="{{block_prefix}}cols cols  is--cols-screen-9  is--cols-sm-12">
+			<h4 class="{{block_prefix}}heading">Визитки на картонной бумаге</h4>
+			<div class="{{block_prefix}}calc-row row  is--wrap  is--gutter15">
+				<div class="{{block_prefix}}calc-cols cols">
+					[[azbntple 
+						tpl="/src/block/site/default/calc/select.html"
+						block_prefix="select-block__" 
+						block_heading="Выберите размер:"
+						block_option="<option>Стандарт 90*50</option><option>Евро 85*55</option><option>Нестандартный</option>"
+					]]
+				</div>
+				<div class="{{block_prefix}}calc-cols cols">
+					[[azbntple 
+						tpl="/src/block/site/default/calc/select.html"
+						block_prefix="select-block__" 
+						block_heading="Печать:"
+						block_option="<option>Односторонняя</option><option>Двусторонняя</option>"
+					]]
+				</div>
+				<div class="{{block_prefix}}calc-cols cols">
+					[[azbntple 
+						tpl="/src/block/site/default/calc/select.html"
+						block_prefix="select-block__" 
+						block_heading="Бумага:"
+						block_option="<option>Majestic</option><option>Touch cover</option><option>Лён</option><option>Другая</option>"
+					]]
+				</div>
+				<div class="{{block_prefix}}calc-cols cols">
+					[[azbntple 
+						tpl="/src/block/site/default/calc/select.html"
+						block_prefix="select-block__" 
+						block_heading="Отделка:"
+						block_option="<option>Лакирование</option><option>Трафарет</option><option>Вырубка</option>"
+					]]
+				</div>
+				<div class="{{block_prefix}}calc-cols cols  is--cols-12">
+					[[azbntple 
+						tpl="/src/block/site/default/calc/range.html"
+						block_prefix="range-block__" 
+						block_heading="Количество:"
+						block_range_id="inputRange"
+					]]
+					
+				</div>
+				<div class="{{block_prefix}}calc-cols cols">
+					[[azbntple 
+						tpl="/src/block/site/default/button/file-icon.html"
+						button_prefix="btn-link__" 
+						button_mod="is--icon"
+						button_for="maket"
+						button_name="Загрузить макет"
+						button_icon="btn-icon-maket"
+					]] 
+				</div>
+			</div>
+		</div>
+		<div class="{{block_prefix}}cols cols  is--cols-screen-3  is--cols-sm-12">
+			[[azbntple 
+				tpl="/src/block/site/default/calc/result.html"
+				block_prefix="calc-result__" 
+			]]
+		</div>
+	</div>
+</div>

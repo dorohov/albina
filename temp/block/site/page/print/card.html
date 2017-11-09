@@ -1,0 +1,69 @@
+<div class="content-block {{block_prefix}}content-block  is--hidden" role="main">	
+	<div class="page-header-panel__block  {{block_mod}}">
+		<div class="page-header-panel__container container">		
+			[[azbntple 
+				tpl="/src/block/site/default/breadcrumb/level2.html" 
+				bread_prefix="breadcrumb__"
+				bread_mod="is--heading  is--blue"
+				level_1="Способы печати"
+				level_1_link="/print.html"
+				level_2="{{block_heading}}" 
+			]]		
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/group.html" 
+				header_prefix="page-header__" 
+				header_mod="is--heading  is--blue  is--panel"
+				header_level="h1"
+				header="{{block_heading}}"
+				header_small_level="h3"
+				header_small="{{block_heading_small}}"
+			]]	
+		</div>	
+		[[azbntple 
+			tpl="/src/block/site/default/bg/round.html" 
+			block_prefix="bg-round__" 
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/bg/card-plane.html" 
+			block_prefix="bg-preview__"
+			block_mod="is--card"
+			block_bg="bg-print-trafaretnaja-pechat-735x590.png"
+			block_bg="bg-print-uf-lakirovanie-735x590.png"
+			block_bg="bg-print-kongretivnoe-tisnenie-735x590.png"
+			block_bg="bg-print-tisnenie-folgoj-735x590.png"
+			block_bg="bg-print-termopodem-735x590.png"
+			block_bg="bg-print-vyrubka-735x590.png"
+		]]		
+		[[azbntple 
+			tpl="/src/block/site/default/bg/card-plane.html" 
+			block_prefix="bg-plane__"
+			block_mod="is--portfolio  is--speed-15"  
+			block_bg="bg-plane-portfolio.png"
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/bg/card-plane.html" 
+			block_prefix="bg-plane__"
+			block_mod="is--services-bottom  is--speed-75"  
+			block_bg="bg-plane-services-bottom.png"
+		]]
+	</div>
+	<div class="container content-block__container {{block_prefix}}container  bg-header__container">
+		[[azbntple 
+			tpl="/src/block/site/default/print/panel-card.html"
+			block_prefix="print-panel-card__" 
+		]]
+	</div>
+	[[azbntple 
+		tpl="/src/block/site/default/form/panel-print.html" 
+		form_prefix="form-panel__"
+		form_bg="bg-form-panel.jpg"
+		form_mod="is--lg"
+		form_mod_form="is--inline  is--cols-2-5" 
+		form_color="is--white"
+		form_heading="Узнайте стоимость разработки под ваш проект"
+		form_heading_small="  "
+		form_id="fcab" 
+		form_btn_name="Хочу фирменный стиль"
+		form_btn_mod="is--form-inline  is--white"
+	]]	
+</div>

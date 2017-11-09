@@ -1,0 +1,98 @@
+.action-panel__{
+	@gutter: 20px;	
+	&row{
+		@media @media-size-xxl {
+			margin-left: -(@gutter);
+			margin-right: -(@gutter);
+			&.is--gutter{
+				margin-top: -(@gutter * 2);
+				& > .cols{
+					padding-top: @gutter * 2;
+				}
+			}
+		}
+	}
+	&cols{
+		@media @media-size-xs-l {
+			.makeCols(6, 12);
+		}
+		@media @media-size-xxl {
+			padding-left: @gutter;
+			padding-right: @gutter;
+		}
+	}
+}
+.action-card__{
+	&item{
+		@media @media-size-xs-p {
+			margin-bottom: 20px;
+		}	
+		max-width: 510px;				
+	}
+	
+	&preview{
+		display: block;
+		position: relative;
+	}	
+}
+.action-card-panel__{
+	&cols{
+		&.is--note{}
+		&.is--cols-6{
+			@media @media-size-sm {
+				.makeCols(12, 12);
+			}
+		}
+		&.is--preview{
+			@media @media-size-sm {
+				.makeCols(6, 12);
+			}
+		}
+	}
+	&preview{
+		position: relative;
+		@media @media-screen {
+			padding-left: 4vw;
+		}
+		&::before{
+			@media @media-screen {
+				content: '';
+				position: absolute;
+				z-index: 1;
+				max-width: 690px;
+				width: 100%;
+				height: 100%;
+				background-color: fadeout(@white-purple, 50%);
+				left: 0;
+				top: 2vw;
+				width: ~"calc(100% - 4vw)";
+			}
+		}
+		&::after{
+			@media @media-screen {
+				content: '';
+				position: absolute;
+				z-index: 2;
+				bottom: -4.5vw;
+				left: -2.5vw;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				background-image: url("@{url-path-img}/bg/bg-leaf-action.png");
+				max-width: 160px;
+				max-height: 220px;
+				width: 9vw;
+				height: 12vw;
+			}
+		}
+		img{
+			position: relative;
+			z-index: 3;
+		}
+	}
+	&text-block{
+		@media @media-size-xxl {
+			padding-left: 2vw;
+		}
+	}
+}

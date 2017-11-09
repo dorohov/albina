@@ -1,0 +1,125 @@
+<nav class="{{class}} navbar {{navbar_mod}}">
+	<div class="{{navbar_prefix}}inner">
+		<div class="container {{navbar_prefix}}container">
+			<div class="row {{navbar_prefix}}row">
+				<div class="cols {{navbar_prefix}}cols  is--header"> 				
+					<div class="{{navbar_prefix}}header">
+						<div class="row {{navbar_prefix}}row-header ">
+							<div class="cols {{navbar_prefix}}cols-header  is--hamburger">
+								<div class="{{navbar_prefix}}hamburger">
+									<button class="{{navbar_prefix}}hamburger-btn hamburger__item" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+										<span class="hamburger__line  is--left"></span>
+										<span class="hamburger__line  is--center"></span>
+										<span class="hamburger__line  is--right"></span>
+									</button>
+								</div>
+							</div>
+							<div class="cols {{navbar_prefix}}cols-header  is--brand">
+								<a class="{{navbar_prefix}}brand" href="{{page.index}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]</a>
+							</div>
+							<div class="cols {{navbar_prefix}}cols-header  is--tel">
+								<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel  is--icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cols {{navbar_prefix}}cols  is--collapse">
+					<div class="{{navbar_prefix}}collapse" >
+						<div class="{{navbar_prefix}}collapse-inner">
+							<div class="row {{navbar_prefix}}collapse-inner-row">
+								<div class="cols {{navbar_prefix}}collapse-inner-cols  is--top">
+									<div class="row {{navbar_prefix}}collapse-row">
+										<div class="cols {{navbar_prefix}}collapse-cols  is--address" >
+											<div class="{{navbar_prefix}}address" >{{contacts.address}}</div> 
+										</div>
+										<div class="cols {{navbar_prefix}}collapse-cols  is--clock" >
+											<div class="{{navbar_prefix}}address" >Ежедневно с {{contacts.clock}}</div>
+										</div>
+										<div class="cols {{navbar_prefix}}collapse-cols  is--soc" >
+											[[azbntple 
+												tpl="/src/block/site/default/social/panel.html"
+												block_prefix="social__" 
+											]]
+										</div>
+										<div class="cols {{navbar_prefix}}collapse-cols  is--contacts" >
+											<div class="{{navbar_prefix}}tel-block">
+												<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel">{{contacts.phone}}</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cols {{navbar_prefix}}collapse-inner-cols  is--bottom">
+									<div class="row {{navbar_prefix}}collapse-row">
+										<div class="cols {{navbar_prefix}}collapse-cols cols  is--nav">
+											<ul class="{{navbar_prefix}}nav">
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item-drop-services.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Услуги" 
+													navbar_link="{{page.services}}"
+													navbar_mod="  " 
+												]]	
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="О нас"
+													navbar_link="{{page.about}}"
+													navbar_mod="  " 
+												]]		
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item-drop-pricelist.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Цены" 
+													navbar_link="{{page.pricelist}}"
+													navbar_mod="  " 
+												]]	
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Cпециалисты"
+													navbar_link="{{page.team}}"
+													navbar_mod="  " 
+												]]
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="До/после"
+													navbar_link="{{page.before_after}}"
+													navbar_mod="  " 
+												]]	
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Спецпредложения"
+													navbar_link="{{page.action}}"
+													navbar_mod="  "
+												]]	
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item-drop-blog.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Мнения специалистов" 
+													navbar_link="{{page.blog}}"
+													navbar_mod="  " 
+												]]	
+												[[azbntple 
+													tpl="/src/block/site/default/navbar/item.html" 
+													navbar_prefix="navbar__" 
+													navbar_name="Контакты"
+													navbar_link="{{page.contacts}}"
+													navbar_mod="  "
+												]]	   
+											</ul>
+										</div>
+										<div class="cols {{navbar_prefix}}collapse-cols cols  is--search">
+											<a href="{{page.search}}" class="{{navbar_prefix}}search">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="search" ]]</a>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

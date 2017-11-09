@@ -1,0 +1,36 @@
+<div class="{{block_prefix}}item  {{hover_prefix}}block">
+	<div class="{{block_prefix}}row row  is--wrap">
+		<div class="{{block_prefix}}cols cols">
+			<a href="{{block_link}}" class="{{block_prefix}}preview">
+				<img src="https://placeholdit.imgix.net/~text?txtsize=30&txt=370x285&w=370&h=285" alt="">	
+				<div class="{{hover_prefix}}item">
+					<div class="{{hover_prefix}}icon">
+						<div class="{{hover_prefix}}icon-inner">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="plus" ]]
+						</div>
+					</div>
+				</div>
+			</a>
+			<div class="{{block_prefix}}note">
+				<h3 class="{{block_prefix}}heading"><a href="{{block_link}}">{{block_heading}}</a></h3>
+				<div class="{{block_prefix}}text-block  text__block">{{block_note}}</div>
+			</div>
+		</div>
+		<div class="{{block_prefix}}cols cols">
+			<div class="{{block_prefix}}cost">
+				от <span class="{{block_prefix}}cost-num">{{block_cost}}</span>
+				<span class="{{block_prefix}}cost-ruble">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]</span>
+				/100&nbsp;шт.
+			</div>
+			<div class="{{block_prefix}}btn">
+				[[azbntple 
+					tpl="/src/block/site/default/button/link.html"
+					button_prefix="btn__" 
+					button_mod="is--bg  is--md-w"
+					button_link="{{block_link}}"
+					button_name="Рассчитать"
+				]]		
+			</div>
+		</div>
+	</div>
+</div>

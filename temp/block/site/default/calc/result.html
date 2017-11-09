@@ -1,0 +1,38 @@
+<div class="{{block_prefix}}block">
+	<div class="{{block_prefix}}inner"> 
+		<div class="{{block_prefix}}container">
+			<div class="{{block_prefix}}row">
+				<h4 class="{{block_prefix}}heading">Параметры заказа</h4>
+				<div class="{{block_prefix}}type">Визитки на картонной бумаге</div>
+				<div class="{{block_prefix}}text-block text__block">
+					<ul>
+						<li><b>Размер:</b> <span>90*50</span></li>
+						<li><b>Тип печати:</b> <span>1-сторонняя</span></li>
+						<li><b>Количество:</b> <span>500</span></li>
+						<li><b>Отделка:</b> <span>Лакирование</span></li>
+						<li><b>Макет:</b> <span>Нет</span></li>
+					</ul>
+				</div>
+				<div class="{{block_prefix}}cost">Цена: <span class="{{block_prefix}}cost-num">10 678</span><span class="{{block_prefix}}cost-ruble">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="ruble" ]]</span></div> 
+				<div class="{{block_prefix}}basket">
+					[[azbntple 
+						tpl="/src/block/site/default/button/button.html"
+						button_prefix="btn__" 
+						button_mod="is--bg  is--calc-result"
+						button_type="button" 
+						button_name="В корзину"
+					]]
+				</div> 
+				<div class="{{block_prefix}}buy">
+					[[azbntple 
+						tpl="/src/block/site/default/button/button-modal.html"
+						button_prefix="btn__" 
+						button_mod="is--calc-result" 
+						button_target="modal-buy"
+						button_name="Купить в 1 клик"
+					]]
+				</div> 
+			</div>
+		</div>
+	</div>
+</div>

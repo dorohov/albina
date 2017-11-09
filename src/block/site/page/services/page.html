@@ -1,0 +1,21 @@
+<div class="content-block {{block_prefix}}content-block" role="main">	
+	<div class="container content-block__container {{block_prefix}}container">
+		[[azbntple 
+			tpl="/src/block/site/default/breadcrumb/level1.html" 
+			bread_prefix="breadcrumb__"
+			bread_mod="is--heading  is--center"
+			level_1="{{block_heading}}" 
+		]]		
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/heading.html" 
+			header_prefix="page-header__" 
+			header_mod="is--heading  is--center"
+			header_level="h1"
+			header="{{block_heading}}"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/services/panel.html"
+			block_prefix="services-panel__" 
+		]]
+	</div>	
+</div>

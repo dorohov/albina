@@ -1,0 +1,50 @@
+{
+	"contacts":{
+		"name":"Центр научной красоты Альбины Самойловой",
+		"domain":"doctor-albina.ru",
+		"domain_link":"http://doctor-albina.ru/",
+		"agreement_page":"agreement",
+		"copyright":"Все права защищены",
+		"email":"doctor-albina@zh_n_k.ru",
+		"email_name":"<span>doctor-albina</span>@zh_n_k.ru",
+		"phone":"+7 (4862) <span>51-10-48</span>",  
+		"phone_tel":"+74862511048",  
+		"clock":"10:00 - 21:00",  
+		"address":"г.&nbsp;Орел, <span>ул.&nbsp;Комсомольская д.&nbsp;89</span>", 
+		"inn":""
+	},
+	"soc":{
+		"vk":"https://vk.com/club56582912",
+		"fb":"https://www.facebook.com/",
+		"inst":"https://www.instagram.com/"
+	},
+	"page":{
+		"index":"/",
+		"services":"/services.html",
+		"services_item":"/services-item.html",
+		"about":"/about.html",
+		"reviews":"/reviews.html",
+		"pricelist":"/price-list.html",
+		"team":"/team.html",
+		"team_item":"/team-item.html",
+		"before_after":"/before-after.html",
+		"before_after_item":"/before-after-item.html",
+		"blog":"/blog.html",
+		"blog_topic":"/blog-topic.html",
+		"blog_item":"/blog-item.html",
+		"action":"/action.html",
+		"action_item":"/action-item.html",
+		"contacts":"/contacts.html",
+		"search":"/search.html"
+	},
+	"url-path-css":"/wp-content/themes/azbnbasetheme/css",
+	"url-path-css":"/css",
+	"url-path-img":"/wp-content/themes/azbnbasetheme/img",
+	"url-path-img":"/img",
+	"url-path-js":"/wp-content/themes/azbnbasetheme/js",
+	"url-path-js":"/js",
+	"url-path-plugins":"/wp-content/themes/azbnbasetheme/plugins",
+	"url-path-plugins":"/plugins",
+	"url-path-favicon":"/wp-content/themes/azbnbasetheme/favicon",
+	"url-path-favicon":"/favicon"
+}
