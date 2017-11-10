@@ -122,7 +122,9 @@
 		}
 	}
 	&text-row{
-		justify-content: center;
+		@media @media-notsmart {
+			justify-content: center;
+		}
 	}
 	&text-cols{
 		//.makeCols(4, 12);
@@ -145,11 +147,13 @@
 	&navbar{}
 	&nav{
 		list-style: none;
-		margin: 0 5px;
+		margin: 0 -5px;
 		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		@media @media-notsmart {
+			justify-content: center;
+		}
 		&.is--svg{padding: 0 15px;}
 		&.is--tabs{padding: 0 0 15px;}
 	}

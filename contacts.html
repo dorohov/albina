@@ -57,10 +57,10 @@
 								<div class="cols navbar__collapse-inner-cols  is--top">
 									<div class="row navbar__collapse-row">
 										<div class="cols navbar__collapse-cols  is--address" >
-											<div class="navbar__address" >г.&nbsp;Орел, <span>ул.&nbsp;Комсомольская д.&nbsp;89</span></div> 
+											<div class="navbar__address" ><span>г.&nbsp;Орел, ул.&nbsp;Комсомольская&nbsp;д.&nbsp;89</span></div> 
 										</div>
 										<div class="cols navbar__collapse-cols  is--clock" >
-											<div class="navbar__address" >Ежедневно с 10:00 - 21:00</div>
+											<div class="navbar__address" >Ежедневно с <span>10:00 - 21:00</span></div>
 										</div>
 										<div class="cols navbar__collapse-cols  is--soc" >
 											<div class="social__block">
@@ -80,7 +80,7 @@
 										</div>
 										<div class="cols navbar__collapse-cols  is--contacts" >
 											<div class="navbar__tel-block">
-												<a href="tel:+74862511048" class="navbar__tel">+7 (4862) <span>51-10-48</span></a>
+												<a href="tel:+74862511048" class="navbar__tel"><span>+7 (4862) 51-10-48</span></a>
 											</div>
 										</div>
 									</div>
@@ -610,7 +610,7 @@
 		<div class="contacts-panel__cols cols  is--cols-screen-8  is--cols-sm-12  is--panel  is--map">
 			<div class="contacts-panel__map  is--panel">
 				<div class="contacts-panel__map-inner  is--panel">
-					<div class="contacts-panel__map-item" id="2gis-map"></div>
+					<div class="contacts-panel__map-item" id="map-google"></div>
 				</div>
 			</div>
 		</div>
@@ -622,31 +622,47 @@
 				<div class="contacts-panel__item">
 					<div class="contact-item__item    ">
 	<a href="tel:+74862511048"    class="contact-item__link    ">
-		Тел: +7 (4862) <span>51-10-48</span>
+		Тел: <span>+7 (4862) 51-10-48</span>
 	</a>
 </div>			
 				</div>		
 				<div class="contacts-panel__item">
 					<div class="contact-item__item    ">
 	<a href="mailto:doctor-albina@zh_n_k.ru"    class="contact-item__link    ">
-		E-mail: <span>doctor-albina</span>@zh_n_k.ru
+		E-mail: <span>doctor-albina@zh_n_k.ru</span>
 	</a>
 </div>			
 				</div>
 				<div class="contacts-panel__item   is--address">
 					<div class="contact-item__item   ">
-	Адрес: г.&nbsp;Орел, <span>ул.&nbsp;Комсомольская д.&nbsp;89</span>
+	Адрес: <span>г.&nbsp;Орел, ул.&nbsp;Комсомольская&nbsp;д.&nbsp;89</span>
 </div>			
 				</div>	
 				<div class="contacts-panel__item  is--clock">
 					<div class="contact-item__item is--clock">
-	Ежедневно с 10:00 - 21:00
+	Ежедневно с <span>10:00 - 21:00</span>
 </div>			
 				</div>
 				<div class="contacts-panel__item">
+					<div class="social__block">
+	<div class="social__row row  is--contacts">
+		<div class="social__cols cols  is--contacts">
+			<a href="https://vk.com/club56582912" class="social__item  is--vk  is--contacts" target="_blank"><svg class="icon-svg icon-vk" role="img">
+	<use xlink:href="/img/svg/sprite.svg#vk"></use>
+</svg></a>
+		</div>
+		<div class="social__cols cols  is--contacts">
+			<a href="https://www.instagram.com/" class="social__item  is--inst  is--contacts" target="_blank"><svg class="icon-svg icon-inst" role="img">
+	<use xlink:href="/img/svg/sprite.svg#inst"></use>
+</svg></a>
+		</div>
+	</div>
+</div>
+				</div>
+				<!--<div class="contacts-panel__item">
 					<a href="https://www.instagram.com/" target="_blank" class="btn-link__item   "><span>INSTAGRAMM</span></a> 
 					<a href="https://vk.com/club56582912" target="_blank" class="btn-link__item   "><span>VK</span></a> 
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>
@@ -671,11 +687,11 @@
 			<div class="cols footer__cols  is--contacts">
 				<div class="footer__contacts-row row">
 					<div class="footer__contacts-cols cols">
-						<a href="tel:+74862511048" class="footer__contacts-item">+7 (4862) <span>51-10-48</span></a>
+						<a href="tel:+74862511048" class="footer__contacts-item"><span>+7 (4862) 51-10-48</span></a>
 					</div>
 					<div class="footer__contacts-cols cols">
 						<div class="footer__contacts-item  is--address">
-							г.&nbsp;Орел, <span>ул.&nbsp;Комсомольская д.&nbsp;89</span>
+							<span>г.&nbsp;Орел, ул.&nbsp;Комсомольская&nbsp;д.&nbsp;89</span>
 						</div>
 					</div>
 				</div>
@@ -727,7 +743,8 @@
 <script src="/js/svg4everybody.min.js" ></script>
 <script>svg4everybody();</script>
 <script>document.createElement("picture");</script>
-		<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
-<script src="/js/2gis-map.js"></script>
+		<script src="/js/google-map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5mvq0SP3WCozmHWsYmfdLq_Y3vlaosik&callback=initMap"
+    async defer></script>
 	</body>
 </html>

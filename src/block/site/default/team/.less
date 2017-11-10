@@ -61,8 +61,8 @@
 	&heading{
 		margin-bottom: 10px;
 		font-weight: 700;
-		.calcFontSize(18, 20, 320, 1680);
-		.calcLineHeight(22, 24, 320, 1680);
+		.calcFontSize(20, 20, 320, 1680);
+		.calcLineHeight(24, 24, 320, 1680);
 		a{
 			&, &:focus, &:hover{
 				color: @black;
@@ -71,8 +71,12 @@
 		}
 	}
 	&text-block{
-		font-size: @b-fs - 2;
+		font-size: @b-fs - 0;
 		line-height: @b-lh - 4;
+		@media @media-screen {
+			font-size: @b-fs - 2;
+			line-height: @b-lh - 4;
+		}
 		&.text__block{
 			p, div{
 				margin-bottom: 5px;

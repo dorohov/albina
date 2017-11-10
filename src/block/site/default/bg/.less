@@ -51,6 +51,11 @@
 				top: 0.6vw;
 				right: 25vw;
 			}
+			&.is--banner{
+				z-index: 5;
+				top: 13vw;
+				left: 8vw;
+			}
 		}
 		&.is--leaf-xl{
 			max-width: 150px;
@@ -286,6 +291,19 @@
 				bottom: 1vw;
 				right: -16vw;
 			} 
+		}
+		&.is--banner-mock{
+			z-index: 1;
+			max-width: 760px;
+			max-height: 660px;
+			width: 40.99vw;
+			height: 35.58vw;
+			bottom: 0vw;
+			right: 15.3vw; 
+			@media @media-size-sm {
+				display: block;
+				right: 7vw;
+			}
 		}
 	}
 }

@@ -189,13 +189,15 @@
 	&collapse-inner-cols{
 		.makeCols(12, 12);
 		&.is--top{
-			.navbar-site.opacity &{display: none}
 			@media @media-device-lg {
 				order: 1;
 				padding-top: 20px;
 			}
 
-			@media @media-screen-lg {margin-bottom: 8px}
+			@media @media-screen-lg {
+				margin-bottom: 8px;
+				.navbar-site.opacity &{display: none}
+			}
 		}
 		&.is--bottom{}
 	}
@@ -250,8 +252,8 @@
 		//text-transform: uppercase;
 		@media @media-device-lg{
 			flex-wrap: wrap;
-			font-size: @navbar-fs + 2;
-			line-height: @navbar-lh - 2px;
+			font-size: @navbar-fs + 6;
+			line-height: @navbar-lh + 0px;
 		}
 		@media @media-screen-lg {
 			font-weight: 500;
@@ -324,12 +326,16 @@
 		}		
 		.navbar__nav-item.open &,
 		.navbar__nav-item.is--active &{
-			font-weight: 700;
+			font-weight: 400;
 			cursor: default;
 			color: @btn-link-color-hover;
 			&::after{
 				transform: scaleX(1);
 			}
+		}
+
+		.navbar__nav-item.is--active &{
+			font-weight: 700;
 		}
 		/*&.is--services{
 			position: relative;
@@ -481,7 +487,7 @@
 			color: @b-color-a;
 		}
 		.navbar__nav-dropdown-category-item.active &{
-			font-weight: 700;
+			//font-weight: 700;
 		} 
 	}
 	&nav-dropdown-category-content{
@@ -522,6 +528,7 @@
 	}
 	&nav-dropdown-item{
 		padding-bottom: 8px;
+		//line-height: @navbar-lh - 13;
     	&.is--heading{
 			@media @media-screen-lg {		
 				padding-bottom: 11px;
@@ -536,9 +543,13 @@
     	position: relative;
     	font-weight: 300;
     	z-index: 1;
-		font-size: @navbar-fs - 2;
-		line-height: @navbar-lh - 6;
 		padding: 3px 20px 3px 0; 
+		font-size: @navbar-fs + 0;
+		line-height: @navbar-lh - 0;
+		@media @media-screen-lg {
+			font-size: @navbar-fs - 2;
+			line-height: @navbar-lh - 6;
+		}
 	}
 
 	&tel-block{
@@ -555,9 +566,10 @@
 		&[href^="tel:"],
 		&[href^="tel:"]:hover, 
 		&[href^="tel:"]:focus{
-			color: @white28;
 			font-size: @navbar-fs;
+			color: @black;
 			@media @media-screen-lg {
+				color: @white28;
 				.calcFontSize(16, 18, 1200, 1680);
 				.calcLineHeight(18, 20, 1200, 1680);
 			}
@@ -572,9 +584,12 @@
 		}
 	}
 	&address{
-		color: @white28;
-		font-size: @b-fs - 4;
-		line-height: @b-lh - 8;
+		color: @black;
+		@media @media-screen-lg {
+			color: @white28;
+			font-size: @b-fs - 4;
+			line-height: @b-lh - 8;
+		}
 	}
 	&hamburger{
 		@media @media-device-lg{}
@@ -657,6 +672,7 @@
 	&block{
 		@media @media-device-lg {
 			background-color: @white;
+			background: @navbar-bg-device;	
 			position: fixed;
 			left: 0;
 			width: 100%;

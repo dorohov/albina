@@ -9,8 +9,8 @@
 	&container{
 		position: relative;
 		z-index: 2;
-		padding-top: 35px;
-		padding-bottom: 35px;	
+		padding-top: 45px;
+		padding-bottom: 45px;	
 		@media @media-screen {
 			padding-top: 7.4vw;
 			padding-bottom: 4.1vw;
@@ -35,7 +35,7 @@
 		&.is--inline.is--cols-3{
 			@media @media-size-xs-l {
 				max-width: 400px;
-				margin: 0 auto;
+				//margin: 0 auto;
 			}
 		}
 	}
@@ -130,7 +130,12 @@
 		width: 100%;
 		border-radius: 0px;
 		//text-align: center;
-		//letter-spacing: 0.2px;		
+		//letter-spacing: 0.2px;	
+		@media @media-size-xs {
+			border: 1px solid fadeout(@black, 55%);
+			background-color: fadeout(@orange, 40%);
+			padding: 5px 10px;
+		}	
 		&::-moz-placeholder{
 			transition: @trs-site;
 			font-family: @b-form-i-ff;
@@ -172,6 +177,18 @@
 				background-color: fadeout(@b-form-i-bg, 100%);
 				border-bottom-color: @b-form-i-border;
 				cursor: text;
+				@media @media-size-xs {
+					border: 1px solid fadeout(@black, 55%);
+					background-color: fadeout(@orange, 40%);
+					&:focus{
+						border-color: @b-form-i-border-f;
+						outline: none;
+						color: @b-form-i-color-f;
+						background-color: @b-form-i-bg-f;
+						&::-moz-placeholder{color: @b-form-i-color-f;}
+						&::-webkit-input-placeholder {color: @b-form-i-color-f;}
+					}
+				}	
 			}
 		}
 		&.is--area{    
@@ -409,6 +426,11 @@ textarea.form__control.is--sm{
 	height: 48px;
 	padding: 10px 0px;
 	background: none;
+	@media @media-size-xs {
+		border: 1px solid fadeout(@black, 55%);
+		background-color: fadeout(@orange, 40%);
+		padding: 10px 10px;
+	}	
 }
 
 .rect-switch{

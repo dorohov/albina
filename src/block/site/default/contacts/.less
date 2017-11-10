@@ -31,15 +31,19 @@
 		//padding-top: 5.4vw;
 	}
 	&item{
-		margin-bottom: 25px;
+		margin-bottom: 15px;
+		@media @media-screen {
+			margin-bottom: 25px;
+		}
+
 		&:last-child{
 			margin-bottom: 0;
 		}
 		&.is--address{
-			margin-bottom: 0px;
+			//margin-bottom: 0px;
 		}
 		&.is--clock{
-			margin-bottom: 20px;
+			//margin-bottom: 20px;
 		}
 	}
 	&map{
@@ -96,7 +100,10 @@
 		&, &:hover, &:focus{
 			color: @b-color;
 		}
-		.calcFontSize(15, 18, 320, 1680);
+		.calcFontSize(17, 18, 320, 1680);
+		@media @media-screen {
+			
+		}
 		span{
 			font-weight: 700;
 			color: @black;

@@ -6,11 +6,11 @@
 		"agreement_page":"agreement",
 		"copyright":"Все права защищены",
 		"email":"doctor-albina@zh_n_k.ru",
-		"email_name":"<span>doctor-albina</span>@zh_n_k.ru",
-		"phone":"+7 (4862) <span>51-10-48</span>",  
+		"email_name":"<span>doctor-albina@zh_n_k.ru</span>",
+		"phone":"<span>+7 (4862) 51-10-48</span>",  
 		"phone_tel":"+74862511048",  
-		"clock":"10:00 - 21:00",  
-		"address":"г.&nbsp;Орел, <span>ул.&nbsp;Комсомольская д.&nbsp;89</span>", 
+		"clock":"<span>10:00 - 21:00</span>",  
+		"address":"<span>г.&nbsp;Орел, ул.&nbsp;Комсомольская&nbsp;д.&nbsp;89</span>", 
 		"inn":""
 	},
 	"soc":{
