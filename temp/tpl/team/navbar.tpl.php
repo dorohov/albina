@@ -26,7 +26,7 @@
 		<div class="<?=$param["block_prefix"];?>dropdown-inner">
 			<ul class="<?=$param["block_prefix"];?>nav">
 				<li class="<?=$param["block_prefix"];?>item">
-					<a class="<?=$param["block_prefix"];?>link  <?=$param["link_prefix"];?>item  is--active" href="<?=l(6);?>"><span>Все специалисты</span></a>
+					<a class="<?=$param["block_prefix"];?>link  <?=$param["link_prefix"];?>item" href="<?=l(6);?>"><span>Все специалисты</span></a>
 				</li>
 				<?
 					foreach($cat_list as $cat) {

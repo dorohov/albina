@@ -3,6 +3,9 @@
 	$email_arr = explode('@', $email);
 	$phone = getContact('phone');	
 	$phone_num = phone(getContact('phone'));
+	
+	$in_cart = $this->Cart->getCartItems();
+	
 ?>
 <nav class="navbar-site scroll navbar scroll-navbar">
 	<div class="<?=$param["block_prefix"];?>inner">
@@ -286,12 +289,26 @@
 									<?}?>
 								</div>
 								<div class="cols <?=$param["block_prefix"];?>collapse-cols  is--btn" >
+									
+									<?
+									if(!is_user_logged_in()) {
+									?>
 									<button type="button" data-toggle="modal" data-target="#modal-enter" class="<?=$param["block_prefix"];?>btn-icon">
 										<svg class="icon-svg icon-btn-login" role="img"><use xlink:href="<?=$this->path('img');?>/svg/sprite.svg#btn-login"></use></svg>
 									</button>
+									<?
+									} else {
+									?>
+									<a href="<?=l(313);?>" class="<?=$param["block_prefix"];?>btn-icon">
+										<svg class="icon-svg icon-btn-login" role="img"><use xlink:href="<?=$this->path('img');?>/svg/sprite.svg#btn-login"></use></svg>
+									</a>
+									<?
+									}
+									?>
+									
 									<a href="<?=l(311);?>" class="<?=$param["block_prefix"];?>btn-icon">
 										<svg class="icon-svg icon-btn-basket" role="img"><use xlink:href="<?=$this->path('img');?>/svg/sprite.svg#btn-basket"></use></svg>
-										<span class="<?=$param["block_prefix"];?>btn-icon-label">5</span>
+										<span class="<?=$param["block_prefix"];?>btn-icon-label azbn__cart__items-amount "><?=count($in_cart);?></span>
 									</a>
 								</div>
 							</div>

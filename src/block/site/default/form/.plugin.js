@@ -1,3 +1,40 @@
+$(function(){
+	"use strict";	
+	$('form.azbn7__api__form')
+		.on('submit', function(event){
+			event.preventDefault();			
+		})
+		.on('jqv.form.result', function(event, errorFound){//submit.azbn7
+			event.preventDefault();			
+		if(errorFound) {			
+		} else {			
+			var form = $(this);
+			var _form = form.clone();			
+			var method = form.attr('data-method') || 'formsave';			
+			_form
+				.append($('<input/>', {
+					type : 'hidden',
+					name : 'method',
+					value : method,
+				}))
+			;			
+			new Azbn7__API__Request(_form.serialize(), function(resp){				
+				_form
+					.trigger('reset')
+					.empty()
+					.remove()
+				;				
+				form
+					.trigger('reset')
+				;				
+				form
+					.closest('.modal')
+						.modal('hide');									
+				$('#modal-message').modal();					
+			});				
+		}			
+	});
+});
 /*
  * Inline Form Validation Engine 2.6.2, jQuery plugin
  *
@@ -10,7 +47,8 @@
  * Form validation engine allowing custom regex rules to be added.
  * Licensed under the MIT License
  */
- (function($) {
+
+(function($) {
 
 	"use strict";
 
@@ -2555,11 +2593,11 @@
 
 			// developer can specify which arrow makes the numbers go up or down
 			var top_arrow_button = (settings.increase_direction === 'down') ?
-				"<div class='prev action-prev'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/img/svg/sprite.svg#arrow-down'></use></svg></div>" :
-				"<div class='prev action-next'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/img/svg/sprite.svg#arrow-up'></use></svg></div>";
+				"<div class='prev action-prev'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/wp-content/themes/azbn7theme/img/svg/sprite.svg#arrow-down'></use></svg></div>" :
+				"<div class='prev action-next'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/wp-content/themes/azbn7theme/img/svg/sprite.svg#arrow-up'></use></svg></div>";
 			var bottom_arrow_button = (settings.increase_direction === 'down') ?
-				"<div class='next action-next'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/img/svg/sprite.svg#arrow-up'></use></svg></div>" :
-				"<div class='next action-prev'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/img/svg/sprite.svg#arrow-down'></use></svg></div>";
+				"<div class='next action-next'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/wp-content/themes/azbn7theme/img/svg/sprite.svg#arrow-up'></use></svg></div>" :
+				"<div class='next action-prev'><svg class='icon-svg' role='img'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/wp-content/themes/azbn7theme/img/svg/sprite.svg#arrow-down'></use></svg></div>";
 
 			var new_ele = $(
 				"<div class='timepicker_wrap " + settings.custom_classes + "'>" +

@@ -81,7 +81,7 @@
 			> &:last-child{margin-bottom: 0}
 			& + h2{padding-top: 10px;}
 			& + h3{padding-top: 15px;}
-			& + h4{padding-top: 35px;}
+			& + h4{padding-top: 10px;}
 		}	
 		& > *{
 			&.img--left{ 
@@ -107,7 +107,7 @@
 			font-weight: 500;			
 		}
 		.table-responsive{
-			padding-top: 40px;
+			padding-top: 10px;
 			border: 0; 
 		} 
 		.table{ 
@@ -209,6 +209,9 @@
 					border-bottom: 1px solid @white-purple;
 					font-size: @b-fs;
 					line-height: @b-lh - 4;
+				}
+				th[colspan]{
+					background-color: fadeout(@white-purple, 50%);
 				}
 				&:first-child{
 					th, td{

@@ -1,60 +1,41 @@
 <?
-$bg_prefix="bg-block__";
-$block_prefix="blog-page__";
+$tax_query_field = 'slug';
+$tax_query_terms = 'blog';
+$btn_link = l(4);
+if($param["include_page"] == "team"){	
+	$tax_query_field = 'id';
+	$tax_query_terms = $param["termId"];
+	$btn_link = $param["termLink"];
+}
+
+$block_prefix="blog-panel__";
 $posts = $this->getItems(array(
 	'post_type' => 'post',
-	'posts_per_page' => 10,
+	'posts_per_page' => 3,
 	'orderby' => array(
 		'menu_order' => 'ASC',
 		'date' => 'DESC',
 		'ID' => 'DESC',
 		'name' => 'ASC',
 	),
-
 	'tax_query' => array(array(
 		'taxonomy' => 'category',
-		'field' => 'slug',
-		'terms' => array('blog'),
+		'field' => $tax_query_field,
+		'terms' => array($tax_query_terms),
 	)),
 
 ));
-$heading_small = get_field('page_heading_small', $id);
-$heading_color = get_field('heading_color', $id);
+if(count($posts)) {
 ?>
-<div class="content-block <?=$block_prefix;?>content-block  <?=$bg_prefix;?>block" role="main">	
-	<div class="container content-block__container <?=$block_prefix;?>container <?=$bg_prefix;?>container">
-		<?
-		// хлебные крошки первого уровня
-		$this->tpl(
-			'_/bread', 
-			array(
-				"block_prefix" => "breadcrumb__",
-				"block_mod" => "is--heading  is--center"
-			)
-		);
-		// заголовок страницы		
-		$this->tpl(
-			'_/heading', 
-			array(
-				"block_prefix" => "page-header__",
-				"block_mod" => "is--heading  is--center"
-			)
-		);
-		?>
-		<div class="blog-panel__block">
-			<?	
-			// навигация по разделам		
-			$this->tpl(
-				'blog/navbar', 
-				array(
-					"block_prefix" => "navbar-category__",
-					"block_mod" => "is--nofixed"
-				)
-			);
-			?>
-			<div class="blog-panel__row row  is--gutter  is--wrap">
+<div class="<?=$param["block_prefix"];?>block  <?=$param["block_mod"];?>">
+	<div class="container <?=$param["block_prefix"];?>container">		
+		<div class="<?=$param["heading_prefix"];?>block  ">
+			<h2 class="<?=$param["heading_prefix"];?>heading  <?=$param["heading_mod"];?>"><span><?=$param["heading"];?></span></h2>		
+		</div>	
+		<div class="<?=$param["block_prefix"];?>list  <?=$param["block_mod"];?>">
+			<div class="<?=$param["block_prefix"];?>row row  is--gutter  is--wrap  <?=$param["block_mod"];?>">
 				<?
-				if(count($posts)) {
+				
 					foreach($posts as $p) {						
 						$link = l($p->ID);
 						$title = $p->post_title;
@@ -67,7 +48,7 @@ $heading_color = get_field('heading_color', $id);
 							$preview = "http://via.placeholder.com/385x330";
 						}						
 				?>
-				<div class="blog-panel__cols cols  is--cols-screen-3  is--cols-sm-4">
+				<div class="<?=$param["block_prefix"];?>cols cols  is--cols-4  is--cols-xs-l-6  <?=$param["block_mod"];?>">
 					<article class="blog-card__item">
 						<a href="<?=$link;?>" class="blog-card__preview block-hover__block">
 							<img src="<?=$preview;?>" alt="<?=$title;?>"  class="block-hover__img  img-responsive"> 
@@ -86,23 +67,13 @@ $heading_color = get_field('heading_color', $id);
 							<?}?>
 						</div> 
 					</article>
-				</div>							
-				<?
-					}
-				}
-				?>
-			</div>
+				</div>								
+				<?}?>
+			</div> 
+		</div>
+		<div class="<?=$param["block_prefix"];?>btn  <?=$param["block_mod"];?>">
+			<a href="<?=$btn_link;?>" class="btn__item"><span>Все советы</span></a>
 		</div>
 	</div>
-	<?
-		//фоновые картинки
-		$this->tpl(
-			'_/bg', 
-			array(
-				"block_prefix" => "bg-block__",
-				"block_mod" => "is--candle",
-				"block_bg" => "bg-candle.png",
-			)
-		);
-	?>
-</div>
+</div>							
+<?}?>
