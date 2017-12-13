@@ -3,12 +3,16 @@
 		
 	}
 	&cols{
-		
+		&.is--card{
+			@media @media-size-xs-l {
+				.makeCols(4, 12);
+			}	 
+		}
 	}
 	&note{
 		padding-bottom: 30px;
 		@media @media-screen {
-			padding-bottom: 1.7vw;
+			padding-bottom: 2.7vw;
 		}
 	}
 	&text-block{
@@ -22,6 +26,36 @@
 				padding-left: 2.5vw;
 			}
 		}
+	}
+	&lisence{
+		margin-left: auto;
+		margin-right: auto;
+		//max-width: 1180px;
+		padding-bottom: 30px;
+		@media @media-screen {
+			padding-bottom: 2.7vw;
+			padding-left: 7.5vw;
+			padding-right: 7.5vw;
+		}
+	}
+}
+
+.about-card__{
+	&item{
+		max-width: 375px;
+		margin-left: auto;
+		margin-right: auto;
+		@media @media-size-xs-p {
+			margin-bottom: 20px;
+		}			
+		@media @media-size-xxl {
+			max-width: 350px;
+		}		
+		
+	}
+	&preview{
+		display: block;
+		position: relative;
 	}
 }
 .about-advantages__{
