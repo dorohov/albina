@@ -425,14 +425,21 @@
 			z-index: 1;
 			top: 0;
 			bottom: 0;
-			left: 0;
-			width: 100%;
 			background-color: @b-color-a;
 			transform: scaleX(0);
 			//transition: all 0.35s @trs, transform 0.3s @trs 0.3s;
 			transition: all 0.35s, transform 0.3s 0.3s, opacity 0s;
 			transform-origin: 0 center;
 			opacity: 0;
+			@media @media-device {
+				right: 0;
+				width: 4px;
+			}
+			@media @media-screen {
+				z-index: 3;
+				left: 0;
+				width: 100%;
+			}
 		}
 		span{
 			position: relative;
@@ -448,11 +455,13 @@
 			transition: all 0.3s, color 0.01s;
 			&::before{
 				width: 4px;
-				left: ~"calc(100% - 4px)";
 				transform: scaleX(1);
 				//transition: all 0.3s @trs 0.3s, transform 0.3s @trs;
 				transition: all 0.3s 0.3s, transform 0.3s, opacity 0s;
 				opacity: 1;
+				@media @media-screen {					
+					left: ~"calc(100% - 4px)";
+				}
 			}
 		}
 		&[aria-expanded="true"],
@@ -1717,6 +1726,9 @@
 			font-size: @b-fs - 6.25px;
 			line-height: @b-lh - 14.25px;
 			padding-bottom: 2px;
+		}
+		@media @media-device {
+			display: none;
 		}
 	}		
 	&dorohovdesign-logotip{		
@@ -4916,6 +4928,9 @@ a.reset_time {
 	}
 	&cols{
 		&.is--preview{
+			@media @media-size-xs {
+				display: none;
+			}
 			@media @media-screen-lg {
 				.makeCols(6, 12);
 			}
@@ -4993,6 +5008,9 @@ a.reset_time {
 	&block{
 		padding-top: 35px;
 		//padding-bottom: 35px;
+		@media @media-size-xs {
+			display: none;
+		}
 		@media @media-screen {
 			padding-top: 5.4vw;
 			padding-bottom: 0;

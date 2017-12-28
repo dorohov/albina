@@ -27,6 +27,9 @@
 	}
 	&cols{
 		&.is--preview{
+			@media @media-size-xs {
+				display: none;
+			}
 			@media @media-screen-lg {
 				.makeCols(6, 12);
 			}
@@ -104,6 +107,9 @@
 	&block{
 		padding-top: 35px;
 		//padding-bottom: 35px;
+		@media @media-size-xs {
+			display: none;
+		}
 		@media @media-screen {
 			padding-top: 5.4vw;
 			padding-bottom: 0;
