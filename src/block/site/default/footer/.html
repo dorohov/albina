@@ -1,0 +1,46 @@
+<footer class="{{footer_prefix}}block">	
+	<div class="container {{footer_prefix}}container">
+		<div class="row {{footer_prefix}}row">
+			<div class="cols {{footer_prefix}}cols  is--logotip">
+				<a href="{{page.index}}" class="{{footer_prefix}}logotip">
+					[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]
+				</a>			
+			</div>
+			<div class="cols {{footer_prefix}}cols  is--btn">				
+				
+			</div>
+			<div class="cols {{footer_prefix}}cols  is--contacts">
+				<div class="{{footer_prefix}}contacts-row row">
+					<div class="{{footer_prefix}}contacts-cols cols">
+						<a href="tel:{{contacts.phone_tel}}" class="{{footer_prefix}}contacts-item">{{contacts.phone}}</a>
+					</div>
+					<div class="{{footer_prefix}}contacts-cols cols">
+						<div class="{{footer_prefix}}contacts-item  is--address">
+							{{contacts.address}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cols {{footer_prefix}}cols  is--address"></div>
+			<div class="cols {{footer_prefix}}cols  is--soc">
+				[[azbntple 
+					tpl="/src/block/site/default/social/panel.html"
+					block_prefix="social__" 
+					block_mod="is--navbar" 
+				]]
+			</div>
+			<div class="cols {{footer_prefix}}cols  is--dorohovdesign">
+				<div class="row {{footer_prefix}}dorohovdesign-row"> 
+					<div class="cols {{footer_prefix}}dorohovdesign-cols  is--text">
+						<div class="{{footer_prefix}}dorohovdesign-text">Разработка сайта</div>
+					</div>
+					<div class="cols {{footer_prefix}}dorohovdesign-cols  is--logotip">
+						<a href="http://dorohovdesign.ru/" target="_blank" class="{{footer_prefix}}dorohovdesign-logotip">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="dorohovdesign" ]]
+						</a>
+					</div>
+				</div>				 
+			</div>	
+		</div>
+	</div>
+</footer>

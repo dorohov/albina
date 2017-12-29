@@ -1,0 +1,26 @@
+.print-panel-card__{
+	&panel{}
+	&block{}
+	&row{}
+	&cols{
+		&.is--cols-7{}
+	}
+	&text-block{
+		margin-bottom: 35px; 
+		@media @media-screen {margin-bottom: 4.5vw;}
+	}
+} 
+.print-card__{
+	&preview{
+		display: block;
+		margin-bottom: 20px;
+	}
+	&heading{
+		a{
+			&, &:focus, &:hover{
+				color: @b-color-h;
+			}
+			.print-card__item:hover &{color: @b-color-a;}
+		}
+	}
+}

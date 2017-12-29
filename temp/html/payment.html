@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body class="is--navbar-bottom"> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+			navbar_mod="  "
+		]] 	  
+		[[azbntple  
+			tpl="/src/block/site/page/payment/page.html"
+			header_prefix="page-header-panel__"
+			block_prefix="payment-page__"
+			block_heading="Оплата"      
+			block_user="Алексей"      
+			block_heading_small="Дисконтная система PROBronze"
+			block_mod="is--basket"  
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]		
+		[[azbntple 
+			tpl="/src/block/site/default/modals/enter.html"
+			modals_prefix="modal-base__" 
+			modals_id="modal-enter"
+			modals_mod="is--enter"
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/modals/message.html"
+			modals_prefix="modal-base__" 
+			modals_id="modal-payment"
+			modals_mod="is--enter"
+			modals_heading="Ваш заказ обрабатывается."
+			modals_note="Точные сроки выполнения заказа Вам сообщит наш менеджер."
+		]]
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
+	</body>
+</html>

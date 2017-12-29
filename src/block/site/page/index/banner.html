@@ -1,0 +1,21 @@
+<div class="{{block_prefix}}block  {{bg_prefix}}block">	
+	<div class="container {{block_prefix}}container {{bg_prefix}}container">
+		<div class="{{block_prefix}}inner">
+			<h3 class="{{block_prefix}}heading">{{block_heading}}</h3>
+			<div class="{{block_prefix}}heading-small">{{block_heading_small}}</div>
+			<div class="{{block_prefix}}preview"><img src="{{url-path-img}}/default/painting-orange.png"></div>
+		</div>
+	</div> 
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html"
+		block_prefix="{{bg_prefix}}"
+		block_mod="is--leaf  is--banner" 
+		block_bg="bg-leaf.png" 
+	]]	
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html"
+		block_prefix="{{bg_prefix}}"
+		block_mod="is--banner-mock"  
+		block_bg="bg-banner.png" 
+	]]	
+</div>

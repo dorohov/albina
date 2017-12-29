@@ -1,0 +1,80 @@
+<div class="{{block_prefix}}block">
+	<h3 class="{{block_prefix}}heading">{{block_heading}}</h3>
+	<div class="{{block_prefix}}row row  is--jcfe  is--gutter15">
+		<div class="{{block_prefix}}cols cols">
+			[[azbntple 
+				tpl="/src/block/site/default/calc/search.html"
+				block_prefix="search-block__" 
+			]]
+		</div>
+		<div class="{{block_prefix}}cols cols">
+			[[azbntple 
+				tpl="/src/block/site/default/calc/select-notlabel.html"
+				block_prefix="select-block__" 
+				block_mod="is--xs"
+				block_heading="  "
+				block_option="<option>Прошлый месяц</option><option>3 месяца назад</option><option>6 месяцев назад</option><option>Год назад</option><option>Все заказы</option>"
+			]]
+		</div>
+	</div>
+	<div class="{{block_prefix}}text-block text__block">
+		<div>
+			<table class="is--noline">
+				<thead>
+					<tr>
+						<th class="is--left">Дата</th>
+						<th class="is--left">Заказ</th>
+						<th>Кол-во,<small>шт</small></th>
+						<th>Стоимость</th>
+						<th>Статус</th>
+						<th>Оплата</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="is--left">20.02.2017</td>
+						<td class="is--left">
+							<h4 class="{{block_prefix}}table-heading">Визитки</h4>
+						</td>
+						<td>100</td>
+						<td><span class="is--ruble">450</span></td>
+						<td>В обработке</td>
+						<td>Оплата наличными</td>
+					</tr>
+					<tr>
+						<td class="is--left">20.02.2017</td>
+						<td class="is--left">
+							<h4 class="{{block_prefix}}table-heading">Визитки, лифлеты</h4>
+						</td>
+						<td>200</td>
+						<td><span class="is--ruble">750</span></td>
+						<td>В обработке</td>
+						<td>Оплачено</td>
+					</tr>
+					<tr class="is--done">
+						<td class="is--left">20.02.2017</td>
+						<td class="is--left">
+							<h4 class="{{block_prefix}}table-heading">Афиши, плакаты, постеры</h4>
+							<div class="{{block_prefix}}table-note">
+								<div><span>Размер:</span> АО 841*1189</div>
+								<div><span>Способ печати:</span> Трафарет</div>
+							</div>
+						</td>
+						<td>100</td>
+						<td><span class="is--ruble">15 000</span></td>
+						<td>Выполнено</td>
+						<td>
+							[[azbntple 
+								tpl="/src/block/site/default/button/link.html"
+								button_prefix="btn__" 
+								button_mod="is--xxs"
+								button_link="/basket.html"
+								button_name="Повторить заказ"
+							]]
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

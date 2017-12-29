@@ -1,0 +1,45 @@
+<div class="{{block_prefix}}block">
+	<form class="{{block_prefix}}form" action="#">
+		<div class="{{block_prefix}}form-row row">
+			<div class="{{block_prefix}}form-cols cols  is--input">
+				<input type="text" name="search" class="form__control" placeholder="Поиск по услугам">
+			</div>
+			<div class="{{block_prefix}}form-cols cols  is--btn">
+				[[azbntple 
+					tpl="/src/block/site/default/button/button.html"
+					button_prefix="btn__" 
+					button_mod="is--search"
+					button_type="submit"
+					button_name="Найти"
+				]]
+			</div>
+		</div>
+	</form>
+	<div class="{{block_prefix}}result">
+		<h3 class="{{block_prefix}}result-heading">Результаты поиска:</h3>
+		<div class="{{block_prefix}}text-block text__block">
+			<ol class="{{block_prefix}}list">
+				<li class="{{block_prefix}}item">
+					<h4 class="{{block_prefix}}link">
+						<a href="{{page.services_item}}">Заполнение носогубных складок и морщин улыбки</a>
+					</h4>
+					<div class="{{block_prefix}}text">
+						Самый популярный способ — заполнить складки филлерами. Для этих целей используют три вида наполнителей, которые различаются между собой составом и временем действия...
+					</div>
+				</li>
+				<li class="{{block_prefix}}item">
+					<h4 class="{{block_prefix}}link"><a href="{{page.services_item}}">Лифтинговые нити</a></h4>
+					<div class="{{block_prefix}}text">Самый популярный способ — заполнить складки филлерами. Для этих целей используют три вида наполнителей, которые различаются между собой составом и временем действия</div>
+				</li>
+				<li class="{{block_prefix}}item">
+					<h4 class="{{block_prefix}}link"><a href="{{page.services_item}}">Плазмолифтинг</a></h4>
+					<div class="{{block_prefix}}text">Для этих целей используют три вида наполнителей, которые различаются между собой составом и временем действия</div>
+				</li>
+				<li class="{{block_prefix}}item">
+					<h4 class="{{block_prefix}}link"><a href="{{page.services_item}}">RF-лифтинг</a></h4>
+					<div class="{{block_prefix}}text">Самый популярный способ — заполнить складки филлерами</div>
+				</li>
+			</ol>
+		</div>
+	</div>
+</div>

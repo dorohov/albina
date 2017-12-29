@@ -1,0 +1,84 @@
+<div class="{{contacts_prefix}}block  {{contacts_mod}}">
+	<div class="{{contacts_prefix}}row row  is--wrap  is--gutter  is--aic  {{contacts_mod}}">
+		<div class="{{contacts_prefix}}cols cols  is--cols-screen-8  is--cols-sm-12  {{contacts_mod}}  is--map">
+			<div class="{{contacts_prefix}}map  {{contacts_mod}}">
+				<div class="{{contacts_prefix}}map-inner  {{contacts_mod}}">
+					<div class="{{contacts_prefix}}map-item" id="map-google"></div>
+				</div>
+			</div>
+		</div>
+		<div class="{{contacts_prefix}}cols cols  is--cols-screen-4  is--cols-sm-12  {{contacts_mod}}">
+			<div class="{{contacts_prefix}}inner"> 
+				[[azbntple 
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="is--heading"
+					header_level="h1"
+					header="{{block_heading}}"
+				]]
+				<div class="{{contacts_prefix}}item">
+					[[azbntple 
+						tpl="/src/block/site/default/contacts/item-link.html" 
+						block_prefix="contact-item__"
+						block_mod="  "
+						block_name="Тел: {{contacts.phone}}"
+						block_link="tel:{{contacts.phone_tel}}"
+						block_attr="  "
+					]]			
+				</div>		
+				<div class="{{contacts_prefix}}item">
+					[[azbntple 
+						tpl="/src/block/site/default/contacts/item-link.html" 
+						block_prefix="contact-item__"
+						block_mod="  "
+						block_icon="contacts-email"
+						block_name="E-mail: {{contacts.email_name}}"
+						block_link="mailto:{{contacts.email}}"
+						block_attr="  "
+					]]			
+				</div>
+				<div class="{{contacts_prefix}}item   is--address">
+					[[azbntple 
+						tpl="/src/block/site/default/contacts/item.html" 
+						block_prefix="contact-item__"
+						block_mod="  "
+						block_icon="contacts-location"
+						block_name="Адрес: {{contacts.address}}"
+					]]			
+				</div>	
+				<div class="{{contacts_prefix}}item  is--clock">
+					[[azbntple 
+						tpl="/src/block/site/default/contacts/item.html" 
+						block_prefix="contact-item__"
+						block_mod="is--clock"
+						block_icon="contacts-clock"
+						block_name="Ежедневно с {{contacts.clock}}"
+					]]			
+				</div>
+				<div class="{{contacts_prefix}}item">
+					[[azbntple 
+						tpl="/src/block/site/default/social/panel.html"
+						block_prefix="social__" 
+						block_mod="is--contacts" 
+					]]
+				</div>
+				<!--<div class="{{contacts_prefix}}item">
+					[[azbntple 
+						tpl="/src/block/site/default/button/link-target.html"
+						button_prefix="btn-link__" 
+						button_mod="  "
+						button_link="{{soc.inst}}"
+						button_name="INSTAGRAMM"
+					]]
+					[[azbntple 
+						tpl="/src/block/site/default/button/link-target.html"
+						button_prefix="btn-link__" 
+						button_mod="  "
+						button_link="{{soc.vk}}"
+						button_name="VK"
+					]]
+				</div>-->
+			</div>
+		</div>
+	</div>
+</div>

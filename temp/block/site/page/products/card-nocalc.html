@@ -1,0 +1,51 @@
+<div class="content-block {{block_prefix}}content-block  is--hidden" role="main">	
+	<div class="page-header-panel__block  {{block_mod}}">
+		<div class="page-header-panel__container container">		
+			[[azbntple 
+				tpl="/src/block/site/default/breadcrumb/level2.html" 
+				bread_prefix="breadcrumb__"
+				bread_mod="is--heading  is--blue"
+				level_1="Продукция"
+				level_1_link="/products.html"
+				level_2="{{block_heading}}" 
+			]]		
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/group.html" 
+				header_prefix="page-header__" 
+				header_mod="is--heading  is--blue  is--panel"
+				header_level="h1"
+				header="{{block_heading}}"
+				header_small_level="h3"
+				header_small="{{block_heading_small}}"
+			]]	
+		</div>
+		[[azbntple 
+			tpl="/src/block/site/default/bg/round.html" 
+			block_prefix="bg-round__" 
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/bg/card-plane.html" 
+			block_prefix="bg-preview__"
+			block_mod="is--card"
+			block_bg="products-prewiev-birki-735x590.png"
+			block_bg="products-prewiev-vizitki-735x590.png"
+			block_bg="products-prewiev-suvenirnaja-produkcija-735x590.png"
+			block_bg="products-prewiev-pakety-735x590.png"
+			block_bg="products-prewiev-otkrytki-735x590.png"
+			block_bg="products-prewiev-listovki-735x590.png"
+			block_bg="products-prewiev-liflety-735x590.png"
+			block_bg="products-prewiev-konvertyi-735x590.png"
+			block_bg="products-prewiev-kalendari-735x590.png"
+			block_bg="products-prewiev-diskontnye-carty-735x590.png"
+			block_bg="products-prewiev-buklety-735x590.png"
+			block_bg="products-prewiev-blanki-735x590.png"
+			block_bg="products-prewiev-afishi-735x590.png"
+		]]
+	</div>
+	<div class="container content-block__container {{block_prefix}}container  bg-header__container">
+		[[azbntple 
+			tpl="/src/block/site/default/products/panel-card-nocalc.html"
+			block_prefix="products-panel-card__" 
+		]]
+	</div>	
+</div>

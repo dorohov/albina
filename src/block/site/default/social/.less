@@ -1,0 +1,90 @@
+//===== social =====//
+@soc_size: 					30px;
+@soc_border_radius: 		0%;
+@soc_border: 				none;
+@soc_bg: 					fadeout(@b-color-a, 100%);
+@soc_bg_hover: 				@b-color-a;
+@soc_color: 				@b-color-h;
+@soc_color_hover: 			@white;
+@soc_color_contacts:		@b-color;
+@soc_gutter:				2.5px; 
+.social__{
+	&block{}
+	&row{
+		align-items: center;
+		@media @media-screen {
+			margin-left: -(@soc_gutter);
+			margin-right: -(@soc_gutter);		
+			&.is--navbar{
+				margin-left: -(@soc_gutter) - 2.5;
+				margin-right: -(@soc_gutter) - 2.5;
+			}
+		}		
+	}
+	&cols{
+		@media @media-screen {
+			padding-left: @soc_gutter;
+			padding-right: @soc_gutter;
+			&.is--navbar{
+				padding-left: @soc_gutter + 2.5;
+				padding-right: @soc_gutter + 2.5;
+			}
+		}
+	}
+	&heading{
+		&.is--enter{
+			font-size: @b-fs - 4;
+			line-height: @b-lh - 6;
+		}		
+	}
+	&item{
+		display: block;
+		width: @soc_size;
+		height: @soc_size;
+		color: @soc_color;
+		svg{display: block;}
+		&.is--reviews{
+			color: @red-dark;
+		}
+		&.is--contacts{
+			color: @b-color-a;
+			color: @red-dark;
+		}
+		&.is--navbar{				
+			@media @media-screen {
+				color: @white28;
+				width: @soc_size - 5;
+				height: @soc_size - 5;
+			}
+		}
+		&.is--vk{
+			&:hover{
+				color: @color-vk;			
+			}
+		}
+		&.is--fb{
+			&:hover{
+				color: @color-fb;		
+			}
+		}
+		&.is--inst{
+			padding: 6px;
+			&.is--navbar{padding: 4px;}
+			&:hover{
+				color: @color-inst;			
+			}
+		}
+		&.is--ok{
+			&:hover{
+				color: @color-ok;			
+			}
+		}
+		&.is--enter{
+			@media @media-notsmart {
+				width: @soc_size + 16;
+				height: @soc_size + 16;
+				padding: 12px;
+			}			
+		}
+	}
+}

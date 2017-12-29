@@ -1,0 +1,37 @@
+<div class="{{form_prefix}}panel  {{form_mod}}">
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html" 
+		block_prefix="bg-block__"
+		block_mod="is--flover-list  is--form-left"	
+		block_bg="bg-flover-list.png"		
+	]]
+	[[azbntple 
+		tpl="/src/block/site/default/bg/card.html" 
+		block_prefix="bg-block__"
+		block_mod="is--cream-flover  is--form-right"	
+		block_bg="bg-cream-flover.png"		
+	]]
+	<div class="container {{form_prefix}}container  {{form_mod}}">
+		<div class="{{form_prefix}}panel-inner  {{form_mod}}">
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/group.html" 
+				header_prefix="page-header__" 
+				header_mod="is--form-panel  is--center"
+				header_level="h3" 
+				header="{{form_heading}}"
+				header_small_level="div"
+				header_small="{{form_heading_small}}"
+			]]
+			[[azbntple 
+				tpl="/src/block/site/default/form/fio-tel-date-time-note.html"
+				form_prefix="form__"
+				form_id="{{form_id}}"
+				form_mod="{{form_mod_form}}" 
+				form_heading="{{form_heading}}" 
+				form_color="{{form_color}}"
+				form_btn_mod="{{form_btn_mod}}"
+				form_btn_name="{{form_btn_name}}"
+			]]	
+		</div> 
+	</div> 
+</div> 

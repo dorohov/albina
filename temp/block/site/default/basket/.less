@@ -1,0 +1,129 @@
+.basket-step__{
+	@gutter: 23px;
+	&block{
+		margin-bottom: 20px;
+		@media @media-screen {
+			margin-bottom: 35px;
+		}
+		@media print{display: none;} 
+		/*@media @media-device{margin-bottom: 15px}
+		@media @media-screen{margin-bottom: 1.5vw;}*/
+		&.is--heading{
+			margin-bottom: 8px; 
+		}
+	}
+	&list{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		list-style: none;
+		margin-top: -5px;
+		margin-left: -@gutter;
+		margin-right: -@gutter;
+	} 
+	&list-item{
+		position: relative;	
+		padding-top: 5px;
+		padding-left: @gutter;
+		padding-right: @gutter;	
+		&.is--active{
+			font-weight: 700;	
+		}
+	}
+	&list-icon{
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(50%, -40%);
+		color: @b-color-h;
+		width: 20px;
+		height: 20px;
+		svg{display: block;}
+	}
+	&list-link{
+		&, &:focus, &:hover{color: @b-color}
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			background-color: @navbar-active-bg;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			transition: 0.35s transform;
+			transform: scale(0, 1);
+			transform-origin: right 0;
+		} 
+		.basket-step__list-item.is--active &{	
+			color: @b-color-h;	
+			&::before{
+				transform: scale(1, 1);
+				transform-origin: left 0;
+			}
+		}
+	}
+} 
+.basket-orders__{
+	&block{
+		@media print{display: none;}
+	}	
+	&row{
+		margin-bottom: 25px;
+		&.is--jcfe{
+			@media @media-notsmart {
+				justify-content: flex-end;
+			}
+		}
+		&.is--jcsb{
+			justify-content: space-between;
+		}		
+	}
+	&cols{
+		@media @media-size-xs-p {
+			.makeCols(12, 12);
+		}
+		@media @media-device {			
+			&.is--print{
+				display: none;
+			}
+			&.is--cost{.makeCols(12, 12);}
+		}
+	}
+	&cost-block{
+		margin-bottom: 15px;
+		@media @media-notsmart {
+			text-align: right;
+			margin-bottom: 1.2vw;
+		}
+	}
+	&cost{
+		.calcFontSize(16, 28, 320, 1680);
+		.calcLineHeight(20, 32, 320, 1680);
+		font-weight: 300;
+		color: @b-color-a;
+		span{
+			font-size: @b-fs + 12;
+			margin-left: 10px;
+			display: inline-block;
+			font-weight: 700;
+			padding-right: 20px;
+			background-repeat: no-repeat;
+			background-position: center right;
+			background-image: url("@{url-path-img}/svg/ruble-pink.svg");
+			background-size: 12px;
+			html.msie &{
+				padding-right: 45px;
+				background-size: 72px;
+			}
+			@media @media-size-xs-p {
+				margin: 15px 0 0;
+			}
+		}
+	}
+	&sale{
+		font-size: @b-fs - 4;
+		line-height: @b-lh - 8;
+	}
+}

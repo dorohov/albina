@@ -1,0 +1,237 @@
+@site-name : "site";
+@import "@{site-name}/var.less";
+
+.irs {
+	position: relative; 
+	display: block;
+	user-select: none;
+}
+.irs-line {
+	position: relative; display: block;
+	overflow: hidden;
+	outline: none !important;
+}
+.irs-line-left, .irs-line-mid, .irs-line-right {
+	position: absolute; display: block;
+	top: 0;
+}
+.irs-line-left {
+	left: 0; width: 11%;
+}
+.irs-line-mid {
+	left: 9%; width: 82%;
+}
+.irs-line-right {
+	right: 0; width: 11%;
+}
+
+.irs-bar {
+	position: absolute; display: block;
+	left: 0; width: 0;
+}
+		.irs-bar-edge {
+			position: absolute; display: block;
+			top: 0; left: 0;
+		}
+
+	.irs-shadow {
+		position: absolute; display: none;
+		left: 0; width: 0;
+	}
+
+	.irs-slider {
+		position: absolute; display: block;
+		cursor: default;
+		z-index: 1;
+	}
+		.irs-slider.single {
+
+		}
+		.irs-slider.from {
+
+		}
+		.irs-slider.to {
+
+		}
+		.irs-slider.type_last {
+			z-index: 2;
+		}
+
+	.irs-min {
+		position: absolute; display: block;
+		left: 0;
+		cursor: default;
+	}
+	.irs-max {
+		position: absolute; display: block;
+		right: 0;
+		cursor: default;
+	}
+
+	.irs-from, .irs-to, .irs-single {
+		position: absolute; display: block;
+		top: 0; left: 0;
+		cursor: default;
+		white-space: nowrap;
+	}
+
+.irs-grid {
+	position: absolute; display: none;
+	bottom: 0; left: 0;
+	width: 100%; height: 20px;
+}
+.irs-with-grid .irs-grid {
+	display: block;
+}
+	.irs-grid-pol {
+		position: absolute;
+		top: 0; left: 0;
+		width: 1px; height: 8px;
+		background: #000;
+	}
+	.irs-grid-pol.small {
+		height: 4px;
+	}
+	.irs-grid-text {
+		position: absolute;
+		bottom: 0; left: 0;
+		white-space: nowrap;
+		text-align: center;
+		font-size: 9px; line-height: 9px;
+		padding: 0 3px;
+		color: #000;
+	}
+
+.irs-disable-mask {
+	position: absolute; display: block;
+	top: 0; left: -1%;
+	width: 102%; height: 100%;
+	cursor: default;
+	background: rgba(0,0,0,0.0);
+	z-index: 2;
+}
+.irs-disabled {
+	opacity: 0.4;
+}
+.lt-ie9 .irs-disabled {
+	filter: alpha(opacity=40);
+}
+
+
+.irs-hidden-input {
+	position: absolute !important;
+	display: block !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 0 !important;
+	height: 0 !important;
+	font-size: 0 !important;
+	line-height: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	outline: none !important;
+	z-index: -9999 !important;
+	background: none !important;
+	border-style: solid !important;
+	border-color: transparent !important;
+}
+
+// Skin details */
+.irs {
+    height: 33px;
+}
+.irs-with-grid {
+    height: 33px;
+}
+.irs-line {
+    height: 3px; 
+    top: ~"calc(50% - 1.5px)"
+}
+.irs-line-left {
+    height: 3px;
+    background: @b-color-h;
+}
+.irs-line-mid {
+    height: 3px;
+    background: @b-color-h;
+}
+.irs-line-right {
+    height: 3px;
+    background: @b-color-h; 
+}
+
+.irs-bar { 
+    top: ~"calc(50% - 1.5px)";
+    height: 3px;
+    background: @b-color-a;
+}
+.irs-bar-edge {
+    top: ~"calc(50% - 1.5px)";
+    height: 3px; 
+    width: 15px;
+    background: @b-color-a;
+}
+
+
+.irs-slider {
+    width: 24px; 
+    height: 24px;
+    top: ~"calc(50% - 12px)";
+    border-radius: 50%;
+    background-color: @b-color-a;
+	background-image: url("@{url-path-img}/svg/range-white.svg");
+	background-position: center;
+    background-size: 16px;
+	background-repeat: no-repeat;
+    transition: box-shadow 0.35s;
+    box-shadow: none;
+    &.state_hover,
+    &:hover{
+		box-shadow: 0px 0px 6px 0.2px @b-color-a;
+    }
+}
+.irs-min, .irs-max {
+    color: @b-color-h;
+    font-size: 14px; 
+    line-height: 14px;
+    bottom: 0; 
+    transform: translateY(110%);
+	padding-right: 10px;
+    /*&::after{
+    	content: '';
+    	position: absolute;
+    	width: 9px;
+    	height: 9px;
+    	top: 0%;
+    	right: 0px;
+    	background-image: url("@{url-path-img}/svg/ruble.svg");
+    	background-position: center;
+    	background-repeat: no-repeat;
+    	opacity: 0.5;
+    }*/
+}
+.irs-from, .irs-to, .irs-single {
+    color: @b-color-a;
+    font-size: 14px; 
+    line-height: 14px;
+    font-weight: 500;
+    bottom: 0; 
+    transform: translateY(110%);
+    /*&::after{
+    	content: '';
+    	position: absolute;
+    	width: 9px;
+    	height: 9px;
+    	top: 0%;
+    	right: 0px;
+    	background-image: url("@{url-path-img}/svg/ruble.svg");
+    	background-position: center;
+    	background-repeat: no-repeat;
+    }*/
+}
+.irs-grid-pol { 
+    background: fadeout(@green, 50%);
+}
+.irs-grid-text {
+    color: fadeout(@green, 50%);
+}

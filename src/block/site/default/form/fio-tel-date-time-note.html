@@ -1,0 +1,51 @@
+<form action="#" class="{{form_prefix}}block  {{form_mod}}" >
+	<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
+	<input type="hidden" name="f[Форма: {{form_heading}}]">
+	<div class="{{form_prefix}}inner  {{form_mod}}"  >
+		<div class="row {{form_prefix}}row  is--wrap">
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--name">
+				<div class="{{form_prefix}}item">
+					<input type="text" class="{{form_prefix}}control form-control validate[required, custom[onlyLetterSp]]  {{form_mod}}  {{form_color}}" id="{{form_id}}[name]" name="f[Имя:]" placeholder="Имя">
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--tel">
+				<div class="{{form_prefix}}item">
+					<input type="tel" class="{{form_prefix}}control form-control validate[required,custom[phone]]  {{form_mod}}  {{form_color}}" id="{{form_id}}[tel]" name="f[Телефон:]" placeholder="Телефон">
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}">
+				<div class="{{form_prefix}}item">
+					<input type="text" data-plugin='datepicker' class="{{form_prefix}}control form-control validate[required]  {{form_mod}}  {{form_color}}" id="{{form_id}}[date]" name="f[Дата приема:]"  placeholder="Выберите дату приема" readonly>
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}">
+				<div class="{{form_prefix}}item">
+					<input type="text" data-plugin="timepicki" class="{{form_prefix}}control form-control validate[required]  {{form_mod}}  {{form_color}}" id="{{form_id}}[time]" name="f[Время приема:]" placeholder="Желаемое время приема" readonly>
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--note">
+				<div class="{{form_prefix}}item">
+					<textarea class="{{form_prefix}}control form-control  {{form_mod}} {{form_color}}" name="f[Комментарий]" placeholder="Короткое описание проблемы"></textarea>
+				</div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--agreement">
+				<div class="rect-switch {{form_prefix}}item  {{form_mod}}">
+	                <input class="rect-switch__input validate[required]" id="{{form_id}}[processing]" name="{{form_id}}[processing]" type="checkbox" checked />
+	                <label for="{{form_id}}[processing]" class="rect-switch__label"></label> 
+					<label for="{{form_id}}[processing]" class="rect-switch__text"> 
+						Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+					</label>
+	            </div>	
+			</div>
+			<div class="cols {{form_prefix}}cols  {{form_mod}}  is--btn">
+				[[azbntple 
+					tpl="/src/block/site/default/button/button.html"
+					button_prefix="btn__" 
+					button_mod="{{form_btn_mod}}"
+					button_type="submit"
+					button_name="{{form_btn_name}}"
+				]]
+			</div>
+		</div>	
+	</div> 
+</form> 

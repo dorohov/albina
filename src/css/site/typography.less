@@ -1,0 +1,70 @@
+body {
+	font-family: @b-ff;	
+	font-size: @b-fs;
+	line-height: @b-lh;
+}
+h1, h2, h3, h4, h5, h6{ 
+	color: @b-color-h;
+	margin: 0 0 10px; 
+}
+//p{margin: 0 0 10px;}
+i, em{font-style: italic;}
+b, strong{font-weight: 700; color: @black}
+h1{
+	font-family: @b-ff-2;
+	.calcFontSize(30, 45, 320, 1680);
+	.calcLineHeight(34, 49, 320, 1680);
+	font-weight: 700;
+}
+h2{
+	font-weight: 700;
+	.calcFontSize(24, 35, 320, 1680);
+	.calcLineHeight(28, 39, 320, 1680);
+}
+h3{
+	//font-weight: 700;
+	.calcFontSize(19, 29, 320, 1680);
+	.calcLineHeight(23, 33, 320, 1680);
+	font-weight: 400;
+}
+h4{
+	font-weight: 400;
+	.calcFontSize(17, 23, 320, 1680);
+	.calcLineHeight(20, 27, 320, 1680);	
+}
+h5{
+	font-weight: 400;
+	.calcFontSize(14, 18, 320, 1680);
+	.calcLineHeight(22, 24, 320, 1680);	
+}
+h6{
+	font-weight: 400;
+	.calcFontSize(12, 16, 320, 1680);
+	.calcLineHeight(20, 22, 320, 1680);	
+}
+ol{
+	margin-left: 30px;
+	li{padding-left: 5px;}
+}
+ul{
+	margin-left: 20px;
+	&.ul-site{
+		li{
+			margin-bottom: 10px; 
+			&:last-child{margin-bottom: 0;}			
+		}
+	}
+}/*
+._tp__{
+	&panel{
+		@media @media-screen{max-width: 960px;}
+	}
+	&row{
+		@media @media-device {flex-wrap: wrap;}
+	}
+	&cols{
+		&.cols-6{
+			@media @media-device {.makeCols(12, 12);}
+		}
+	}
+}*/

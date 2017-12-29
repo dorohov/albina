@@ -1,0 +1,40 @@
+<li class="{{navbar_prefix}}nav-item  {{navbar_mod}} dropdown">
+	<a href="#" class="dropdown-toggle {{navbar_prefix}}nav-link" data-toggle="dropdown"><span>{{navbar_name}}</span></a>
+	<div class="{{navbar_prefix}}nav-dropdown dropdown-menu">
+		<div class="container {{navbar_prefix}}nav-dropdown-container">
+			<div class="{{navbar_prefix}}nav-dropdown-row  row  is--gutter  is--wrap">
+				<div class="{{navbar_prefix}}nav-dropdown-cols  cols">
+					<ul class="{{navbar_prefix}}nav-dropdown-menu">					
+						[[azbntple 
+							tpl="/src/block/site/default/navbar/item-drop-link.html" 
+							navbar_prefix="navbar__" 
+							navbar_name="Статьи специалистов" 
+							navbar_link="{{page.blog}}"
+						]]	
+					</ul>
+				</div>
+				<div class="{{navbar_prefix}}nav-dropdown-cols  cols">
+					<ul class="{{navbar_prefix}}nav-dropdown-menu">					
+						[[azbntple 
+							tpl="/src/block/site/default/navbar/item-drop-link.html" 
+							navbar_prefix="navbar__" 
+							navbar_name="Статьи по темам" 
+							navbar_link="{{page.blog_topic}}"
+						]]	
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+
+
+
+
+
+
+
+
+
+

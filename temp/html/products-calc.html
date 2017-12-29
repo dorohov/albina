@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body class="is--calc-result"> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+			navbar_mod="  "
+		]] 	  
+		[[azbntple  
+			tpl="/src/block/site/page/products/calc.html"
+			block_prefix="products-page__"
+			block_mod="is--hidden  is--calc"
+			block_heading="Визитки на картонной бумаге"      
+			block_heading_small="Отправляйте заказы нам через сайт" 
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]		
+		[[azbntple 
+			tpl="/src/block/site/default/modals/enter.html"
+			modals_prefix="modal-base__" 
+			modals_id="modal-enter"
+			modals_mod="is--enter"
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/modals/buy.html"
+			modals_form_tpl="email" 
+			modals_prefix="modal-base__" 
+			modals_id="modal-buy"
+			modals_mod="is--enter"
+			modals_heading="Оформить заказ!"
+			modals_heading_small=" "
+			modals_form_id="fbm"
+			modals_form_btn="Оформить"  
+		]]
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
+		[[azbntple tpl="/src/block/site/default/script/rangeSlider.html" ]]
+	</body>
+</html>

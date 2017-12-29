@@ -1,0 +1,64 @@
+.include-custom-font(
+	@family: @bodoni, 
+	@src-name: @bodoni, 
+	@weight: normal, 
+	@style: normal
+	){
+	@font-face{			
+		font-family: "@{family}";			
+		src:	url('@{url-path-fonts}/@{src-name}.woff2') format('woff2'),
+				url('@{url-path-fonts}/@{src-name}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-icon(@family: @icon, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src: url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-font(
+	@family: @bodoni,
+	@src-name: @bodoni,
+	@weight: 400, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @bodoni,
+	@src-name: @bodoni-italic,
+	@weight: 400, 
+	@style: italic
+	);
+.include-custom-font(
+	@family: @bodoni,
+	@src-name: @bodoni-bold,
+	@weight: 700, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @arimo,
+	@src-name: @arimo,
+	@weight: 400, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @arimo,
+	@src-name: @arimo-italic,
+	@weight: 400, 
+	@style: italic
+	);
+.include-custom-font(
+	@family: @arimo,
+	@src-name: @arimo-bold,
+	@weight: 700, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @annabelle,
+	@src-name: @annabelle,
+	@weight: 400, 
+	@style: normal
+	);

@@ -1,0 +1,35 @@
+<?
+$this->tpl(
+	'mainpage/header', 
+	array(
+		"block_prefix"=>"header-block__",
+	)
+);
+$this->tpl(
+	'mainpage/advantages', 
+	array(
+		"block_prefix"=>"advantages-panel__",
+	)
+);
+$this->tpl(
+	'mainpage/products', 
+	array(
+		"block_prefix"=>"products-panel-category__",
+		"block_mod"=>"is--index",
+	)
+);
+$this->tpl(
+	'mainpage/portfolio', 
+	array(
+		"block_prefix"=>"portfolio-panel__",
+		"block_mod"=>"is--index",
+	)
+);
+$this->tpl(
+	'contacts/index', 
+	array(
+		"block_prefix"=>"portfolio-panel__",
+		"block_mod"=>"is--index",
+	)
+);
+?> 

@@ -1,0 +1,38 @@
+<article class="{{block_prefix}}item">
+	<div class="{{block_prefix}}row row">
+		<div class="{{block_prefix}}cols cols  is--preview">
+			<div class="{{block_prefix}}preview">
+				<img src="http://via.placeholder.com/110x110" alt=""  class="img-responsive"> 
+			</div> 	
+		</div>
+		<div class="{{block_prefix}}cols cols  is--heading">
+			<time class="{{block_prefix}}date" datetime="{{block_date_iso}}">{{block_date}}</time>
+			<h4 class="{{block_prefix}}heading">Отзыв {{block_name}}</h4>
+			<div class="{{block_prefix}}services">О <a href="{{page.services_item}}">{{block_services}}</a></div>
+			<div class="{{block_prefix}}soc">
+				<div class="social__row row  is--reviews">
+					<div class="social__cols cols  is--reviews">
+						<a href="#" class="social__item  is--vk  is--reviews">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="vk" ]]</a>
+					</div>
+					<div class="social__cols cols  is--reviews">
+						<a href="#" class="social__item  is--inst  is--reviews">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="inst" ]]</a>
+					</div>
+					<div class="cols">
+						[[azbntple 
+							tpl="/src/block/site/default/button/link-fancybox.html"
+							button_prefix="btn__" 
+							button_mod="is--xs"
+							button_fancybox="gallery-reviews"
+							button_link="http://olpharm.ru/assets/images/ot1.jpg"
+							button_name="Оригинал отзыва"
+						]]
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>			
+	<div class="{{block_prefix}}note">
+		<div class="{{block_prefix}}text-block  text__block">{{block_note}}</div>
+	</div>
+</article>
+

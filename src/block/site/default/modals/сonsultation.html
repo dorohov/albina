@@ -1,0 +1,30 @@
+<div class="modal fade {{modals_prefix}}modal" id="{{modals_id}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog {{modals_prefix}}dialog  {{modals_mod}}">
+		<div class="modal-body {{modals_prefix}}body  {{modals_mod}}" >
+			<button type="button" class="btn-site  {{modals_prefix}}close  modal-close" data-dismiss="modal" aria-hidden="true">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="modal-close"]]
+			</button>
+			<div class="modal-content {{modals_prefix}}content">
+				[[azbntple 
+					tpl="/src/block/site/default/page-header/group.html" 
+					header_prefix="page-header__" 
+					header_mod="is--modals"
+					header_level="h4" 
+					header="{{modal_heading}}"
+					header_small_level="div"
+					header_small="{{modal_heading_small}}"
+				]]	
+				
+				[[azbntple 
+					tpl="/src/block/site/default/form/fio-tel-note.html" 
+					form_prefix="form__"
+					form_id="{{modal_form_id}}"
+					form_heading="{{modal_heading}}"
+					form_mod="  " 
+					form_color="  "
+					form_btn_name="{{modal_form_btn}}"
+				]]	
+			</div> 
+		</div> 
+	</div>
+</div>

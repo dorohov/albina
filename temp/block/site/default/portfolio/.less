@@ -1,0 +1,437 @@
+.portfolio-card__{
+	&item{
+		@media @media-size-xs-p {
+			&.is--category{
+				margin-bottom: 0;
+			}
+		}			
+		position: relative;
+		height: 100%;
+		&.is--link{
+			background-color: @white;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			position: absolute;
+			top: 30px;
+			left: 15px;
+			right: 15px;
+			bottom: 0;
+			height: ~"calc(100% - 30px)";	
+			@media @media-size-xs-p {
+				//height: 150px;
+			}
+		}
+		&.is--link-icon{
+			background-color: @white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 30px;
+			left: 15px;
+			right: 15px;
+			bottom: 0;
+			height: ~"calc(100% - 30px)";
+		}
+	}
+	&preview{
+		display: block;
+		position: relative;
+	}
+	&preview-picture{
+		@media @media-screen {			
+			position: relative;
+			display: block;
+			height: 100%;
+			max-height: 260px;
+			img{
+				width: 100%;
+				height: 100%;
+				max-height: 260px;
+				height: 14.02vw;
+				min-height: 145px;
+			}
+		}
+	}
+}
+.portfolio-panel__{
+	&panel{}
+	&block{
+		&.is--index{
+			position: relative;
+			padding-top: 35px;
+			padding-bottom: 35px;
+			@media @media-screen {
+				padding-top: 8vw;
+				padding-bottom: 10vw;
+			}
+		}
+	}
+	&heading{
+		&.is--index{
+			.calcFontSize(24, 44, 320, 1680);
+			.calcLineHeight(30, 50, 320, 1680);
+			margin-bottom: 25px;
+			@media @media-screen {margin-bottom: 2.5vw}
+		}
+	}
+	&row{
+		&.is--index{
+			&.is--gutter{
+				@media @media-size-xs {
+					margin-top: -15px;
+					& > .cols{
+						padding-top: 15px;
+					}
+				}
+			}
+			@media @media-size-xs {
+				margin-left: -7.5px;
+				margin-right: -7.5px;
+			}
+		}
+	}
+	&cols{
+		/*@media @media-size-xs-p {
+			.makeCols(12, 12);
+		}
+		@media @media-size-xs-l {
+			.makeCols(6, 12);
+		}*/
+		@media @media-size-xs {
+			.makeCols(12, 12);
+		}
+		&.is--cols-sm-6{			
+			@media @media-size-sm-l {
+				.makeCols(3, 12);
+			}
+		}
+		&.is--cols-screen-3{
+			@media @media-size-xs-l {
+				.makeCols(6, 12);
+			}
+			@media @media-size-md {
+				padding: 0;
+				.makeCols(0, 12);
+			}
+		}
+		&.is--cols-screen-9{
+			@media @media-size-md {
+				.makeCols(12, 12);
+			}
+		}
+		&.is--index{
+			@media @media-size-xs {
+				padding-left: 7.5px;
+				padding-right: 7.5px;			
+			}
+			@media @media-size-xs-p {
+				.makeCols(6, 12);			
+			}
+			@media @media-size-xs-l {
+				.makeCols(4, 12);			
+			}
+		}
+		&.is--btn{
+			position: relative;
+			@media @media-size-xs {
+				.makeCols(12, 12);			
+			}			
+		}
+		&.is--link{	
+			position: relative;
+			min-height: 100px;
+		}
+	}
+	&inner-cols{
+		.makeCols(12, 12);
+		@media @media-size-xs-l {
+			.makeCols(6, 12);
+		}
+		&.is--btn{
+			position: relative;
+			min-height: 100px;
+			@media @media-size-xs-p {
+				.makeCols(12, 12);
+			}
+		}
+	} 
+	&btn{
+		text-align: right;
+	}
+}
+.portfolio-panel-category__{
+	&block{}
+	&row{
+		&.is--gutter{
+			margin-top: -15px;
+			& > .cols{
+				padding-top: 15px;
+			}
+		}
+	}
+	&cols{
+		@media @media-size-xs-p {
+			.makeCols(12, 12);
+		}
+		&.is--big{	
+			@media @media-size-xs-l {				
+				.makeCols(6, 12);
+				order: -1;
+			}		
+			@media @media-tablet {
+				.makeCols(6, 12);
+				order: -1;
+			}
+		}
+		&.is--list{
+			@media @media-tablet {
+				.makeCols(12, 12);
+			}
+		}
+		&.is--link{	
+			position: relative;
+			@media @media-size-xs-l {				
+				.makeCols(6, 12);
+				order: -2;
+			}		
+			@media @media-tablet {
+				.makeCols(6, 12);
+				order: -2;
+			}
+		}
+		
+	}
+	&inner-row{
+	}	
+	&inner-cols{
+		@media @media-size-xs-l {				
+			.makeCols(6, 12);			
+		}	
+
+	}	
+}
+
+.portfolio-navbar__{
+	&block{
+		@media @media-device-lg {
+			background-color: @white;
+			position: fixed;
+			left: 0;
+			width: 100%;
+			height: ~"calc(100% - @{navbar-device})";
+			z-index: 95;
+			bottom: 0;
+			transform: translateY(~"calc(100% - @{navbar-bottom})");
+			transition: @trs-site;
+		    //transition: all 0.55s cubic-bezier(0.5, 0.5, 0, 1);
+			overflow: hidden;
+		}
+		@media @media-screen-lg {
+			position: relative;
+		}		
+		&.open{
+			transform: translateY(0);
+		}
+		.dropdown-backdrop{display: none;}
+	}
+	&btn-block{
+		//background-color: fadeout(@blue-light, 70%);
+		display: block;
+		&, &:focus, &:hover{color: @b-color}
+		@media @media-screen-lg {
+			display: none;
+		}
+	}
+	&btn{
+		display: flex;
+		align-items: center;
+		padding: 10px 0px;
+	}
+	&btn-name{
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 1.5px;
+		font-size: @b-fs - 2;
+		padding-left: 15px;
+	}
+	//hamburger
+	&btn-hamb{
+		position: relative;
+		width: 24px;
+		height: 24px;
+	}
+	&btn-hamb-item{
+		width: 24px;
+		height: 2px;
+		background-color: @b-color-a;
+		position: absolute;
+		border-radius: 5px;
+		transition: @trs-site;
+		&.is--top{
+			top: 4px;
+			transition-delay: 0.4s;
+			.portfolio-navbar__block.open &{
+				width: 0;
+				transition-delay: 0s;
+			}
+		}
+		&.is--center{
+			top: ~"calc(50% - 1px)";
+			transition-delay: 0.3s;
+			.portfolio-navbar__block.open &{
+				width: 0;
+				transition-delay: 0.1s;
+			}
+		}
+		&.is--bottom{
+			bottom: 4px;
+			transition-delay: .2s;
+			.portfolio-navbar__block.open &{
+				width: 0;
+				transition-delay: 0.2s;
+			}
+		}
+		&.is--left-top{
+			transition-delay: 0s;
+		    top: 15%;
+    		left: 70%;
+			transform: translate(-50%, -50%) rotate(45deg) scaleX(0);
+			width: 100%;
+			transform-origin: left top; 
+			.portfolio-navbar__block.open &{
+				transition-delay: 0.25s;
+				transform: translate(-50%, -50%) rotate(45deg) scaleX(1);
+			}
+		}
+		&.is--right-top{
+			transition-delay: .20s;
+		    top: 15%;
+			left: 35%;
+			transform: translate(-50%, -50%) rotate(-45deg) scaleX(0);
+			width: 100%;
+			transform-origin: right top;
+			.portfolio-navbar__block.open &{
+				transform: translate(-50%, -50%) rotate(-45deg) scaleX(1);
+				transition-delay: 0.35s;
+			}
+		}
+	}
+	&dropdown{
+		position: relative;
+		height: ~"calc(100% - @{navbar-bottom})";
+		@media @media-device-lg {
+			background-color: @white;
+		}
+		@media @media-screen-lg {
+			height: 100%;
+			padding: 12px 0;
+		}
+		padding-left: 15px;
+    	padding-right: 15px;    
+    	margin-right: auto;
+	    margin-left: auto;
+		@media @media-size-md {
+			height: 100%;
+    		width: 95vw;
+		}
+	}
+	&dropdown-inner{
+		position: relative;
+		height: 100%;
+		overflow: auto;
+		@media @media-screen-lg {
+			overflow: visible;
+		}
+	}
+	&nav{
+		list-style: none;
+		padding: 0px;
+		margin: 0; 
+		@media @media-device-lg {
+			padding: 20px 50px;
+			padding: 20px 25px;
+		}
+	}
+	&item{
+		margin-bottom: 15px;
+		margin-bottom: 5px;
+		@media @media-screen-lg {
+			margin-bottom: 12px;
+		}
+	}
+	&link{
+		position: relative;
+		display: block;
+		font-size: @b-fs - 1;
+		line-height: @b-lh - 6;
+		padding: 5px 0px 5px 20px;
+		span{			
+		}
+		&, &:focus{color: @b-color;}
+		&::before{
+			content: "";
+			position: absolute;
+			top: 6px;
+			top: 11px;
+			left: 2px;
+			width: 6px;
+			height: 6px;
+			border: 2px solid @b-color-a;
+			border-radius: 50%;
+			transition: @trs-site;
+		}
+		&.no--before{
+			font-weight: 700;
+			color: @green;
+			text-transform: uppercase;
+			font-size: @b-fs - 2;
+			letter-spacing: 1px;
+			&::before{display: none;}
+		}
+		.portfolio-navbar__item.is--active &,
+		&:hover{
+			color: @b-color-a;
+			&::before{
+				background-color: @b-color-a;
+				transform: scale(1.8);
+				box-shadow: 0px 0px 5px 0px @b-color-a;
+			}
+		}
+		.portfolio-navbar__item.is--active &{
+			font-weight: 700;
+			cursor: default;
+			text-transform: uppercase;
+			letter-spacing: 0.6px;
+		}
+	}
+	&row{		
+		display: flex;
+	}
+	&line{
+		flex-grow: 1;
+		position: relative;
+		margin-left: 20px;
+		&::before{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: ~"calc(50% - 1px)";
+			height: 2px;			
+			background-color: @b-color-a;
+			transition: @trs-site;
+			transform-origin: 0 0;
+			transform: scaleX(0);
+			width: 10%;
+			@media @media-screen-lg {
+				width: 65%;
+			}
+			.portfolio-navbar__link:hover &,
+			.portfolio-navbar__item.is--active &{
+				transform: scaleX(1);
+			}
+		}
+	}
+} 

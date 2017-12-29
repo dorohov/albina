@@ -1,0 +1,239 @@
+ //
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+	//overflow: hidden; 
+}
+.modal {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	@media @media-size-xs{
+		&.fade .modal-dialog {left: -100%;}
+		&.in .modal-dialog {left: 0;}
+	}
+	@media @media-notsmart{
+		&.fade .modal-dialog {top: 0;}
+		&.in .modal-dialog {top: 5%;}
+	}
+	@media @media-size-mdl{
+		&.fade .modal-dialog {top: 0;}
+		&.in .modal-dialog {top: 0%;}
+	}
+}
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+	@media @media-notsmart{overflow-y: hidden;}
+	
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal-background;
+	background-color: @modal-backdrop-bg;
+	// Fade for backdrop
+	&.fade { .opacity(0); }
+	&.in { .opacity(0.90); }
+
+}
+.modal-dialog {
+	transition: all 0.5s;
+	position: relative;
+	@media @media-size-xs 	{width: auto;	margin: 0px;}  
+	@media @media-size-sm 	{width: 620px;	margin: 10px auto;}  
+	@media @media-screen 	{width: 600px;	margin: 0px auto;} 
+	 
+}
+.modal-body {
+	position: relative;
+	background: @white;
+	//color: @black;	
+	@media @media-size-xs{padding: 35px 40px;}	
+	@media @media-size-sm{padding: 70px 60px 50px;}
+	@media @media-screen{padding: 3.6vw 4vw 3vw;}
+}
+.modal-content{}
+// Title text within header
+.modal-title {}
+.modal-close{
+    position: absolute;
+    top: 20px;
+	right: 20px; 
+    z-index: 5; 
+    border: 2px solid @red-dark; 
+   	color: @white;
+   	background-color: @red-dark;
+   	border-radius: 50%;
+   	transition: @trs-site;  	 
+	width: 32px;
+	height: 32px;
+	padding: 7px;
+	svg{
+		width: 14px;
+		height: 14px;
+		display: block;
+	} 	
+	@media @media-size-xs{
+		top: 5px;
+		right: 5px;
+	}
+	@media @media-screen{
+		top: 1.1vw;
+		right: 1.1vw;  
+	}	
+	&:hover{
+		background-color: @b-color-a;
+		border-color: @b-color-a;
+	}
+}
+.modal-note{
+	margin-bottom: 20px;
+}
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+//custom styles
+.modal-map__{
+	&modal{
+		padding: 0!important;
+	}
+	&dialog{
+		width: 100%;
+		height: 100%;
+		@media @media-notsmart{
+			.fade.in &{top: 100%;}
+			.modal.in &{top: 0;}
+		}
+	}
+	&body{
+		position: relative;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&map{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.modal-base__{
+	&modal{
+		//display: block;
+		//opacity: 1;
+		//background: @black
+	}
+	&dialog {
+		//background: url('/img/maket/enter.jpg') no-repeat -718px -160px;
+		//height: 100%;
+		//overflow: auto;
+		&.is--enter{
+			@media @media-notsmart {
+				 
+			}
+		}
+	}
+	&body {
+		//opacity: 0.7;
+		//background-color: @blue-light;
+		//overflow: hidden;
+		&.is--enter{			
+			@media @media-screen {
+			}
+		}
+	}
+	/*&bg{
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media @media-screen {
+			position: absolute;
+			z-index: 1;
+			top: 20px;
+			left: -5px;
+			max-width: 440px;
+			max-height: 550px;
+			width: 24vw;
+			height: 30vw;
+		}		
+	}*/
+	&content{
+		position: relative; 
+		z-index: 2;
+	}
+	&tabs-nav{
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px 25px;
+	}
+	&tabs-nav-item{
+		padding: 0 15px;
+	}
+	&tabs-nav-link{
+		display: block;
+		position: relative;
+		z-index: 1;
+		padding: 0 3px;
+		//font-weight: 700;
+		.calcFontSize(19, 21, 320, 1680);
+		.calcLineHeight(23, 25, 320, 1680);
+		&::before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			background-color: fadeout(@yellow, 50%);
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			transition: 0.35s transform;
+			transform: scale(0, 1);
+			transform-origin: right 0;
+		}
+		&, &:focus, &:hover{
+			color: @b-color-h;
+		}	
+		.modal-base__tabs-nav-item.active &,
+		&:hover{
+			&::before{
+				transform: scale(1, 1);
+				transform-origin: left 0;
+			}
+		}
+	}
+	&tab-content{}
+	&tab-pan{
+		display: none;
+		opacity: 0;
+		transition: opacity 0.35s;
+		&.active{
+			opacity: 1;
+			display: block;
+		}
+	}
+}

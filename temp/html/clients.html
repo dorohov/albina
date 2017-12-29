@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+			navbar_mod="  "
+		]] 	  
+		[[azbntple  
+			tpl="/src/block/site/page/clients/page.html"
+			block_prefix="clients-page__" 
+			block_heading="Дисконтная программа для корпоративных клиентов"       
+			block_heading_small="Мы предлагаем систему лояльности"  
+			block_mod="is--hidden  is--price"    
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]		
+		[[azbntple 
+			tpl="/src/block/site/default/modals/enter.html"
+			modals_prefix="modal-base__" 
+			modals_id="modal-enter"
+			modals_mod="is--enter"
+		]]
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
+	</body>
+</html>

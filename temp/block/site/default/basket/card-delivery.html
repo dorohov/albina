@@ -1,0 +1,115 @@
+<div class="{{block_prefix}}block">
+	<h3 class="{{block_prefix}}heading  is--delivery">Выберите способ доставки:</h3>
+	<ul class="{{block_prefix}}delivery-tabs">
+		[[azbntple 
+			tpl="/src/block/site/default/basket/card-delivery-tab.html"
+			block_prefix="orders-card__"
+			block_link="courier"
+			block_mod="  "
+			block_heading="Курьером"
+			block_note="Доставка по городу 300 рублей"
+			block_icon="btn-icon-courier"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/basket/card-delivery-tab.html"
+			block_prefix="orders-card__"
+			block_link="transport"
+			block_mod="  "
+			block_heading="До транспортной компании"
+			block_note="300 рублей"
+			block_icon="btn-icon-transport"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/basket/card-delivery-tab.html"
+			block_prefix="orders-card__"
+			block_link="pickup"
+			block_mod="  "
+			block_heading="Самовывоз"
+			block_note="Бесплатно"
+			block_icon="btn-icon-pickup"
+		]]
+	</ul>
+	<div class="{{block_prefix}}delivery-panes">
+		<div class="{{block_prefix}}delivery-pane " id="courier">
+			<div class="{{block_prefix}}delivery-row  row  is--wrap  is--gutter15">
+				<div class="{{block_prefix}}delivery-cols  cols">
+					<h4 class="{{block_prefix}}delivery-pane-heading">Адрес доставки:</h4>
+					<div class="{{block_prefix}}delivery-pane-note">
+						302028, Орёл, ул. Бульвар Победы 6, 4 этаж, оф. 52
+					</div>
+					<div>
+						[[azbntple 
+							tpl="/src/block/site/default/button/button-modal.html"
+							button_prefix="btn-link__" 
+							button_mod="is--xs"
+							button_target="modal-profile-address"
+							button_name="Редактировать"
+						]]
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="{{block_prefix}}delivery-pane" id="transport">
+			<h4 class="{{block_prefix}}delivery-pane-heading">Выберите транспортную компанию:</h4>
+			<div class="{{block_prefix}}transport-list">
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-delivery-transport.html"
+					block_prefix="orders-card__"
+					block_id="transport-pacom"
+					block_mod="active  is--transport"
+					block_heading="ПЭК"
+					block_icon="transport-icon-pacom"
+					block_link="https://pecom.ru/services-are/the-calculation-of-the-cost/"
+				]]
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-delivery-transport.html"
+					block_prefix="orders-card__"
+					block_id="transport-baikalsr"
+					block_mod="is--transport"
+					block_heading="Байкал Сервис"
+					block_icon="transport-icon-baikalsr"
+					block_link="https://orel.baikalsr.ru/tools/calculator/"
+				]]
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-delivery-transport.html"
+					block_prefix="orders-card__"
+					block_id="transport-dellin"
+					block_mod="is--transport"
+					block_heading="Деловые линии"
+					block_icon="transport-icon-dellin"
+					block_link="https://orel.dellin.ru/requests/"
+				]]
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-delivery-transport.html"
+					block_prefix="orders-card__"
+					block_id="transport-skif"
+					block_mod="is--transport"
+					block_heading="СКИФКАРГО"
+					block_icon="transport-icon-skif"
+					block_link="http://www.skif-cargo.ru/calc/"
+				]]
+				[[azbntple 
+					tpl="/src/block/site/default/basket/card-delivery-transport-input.html"
+					block_prefix="orders-card__"
+					block_mod="is--input"
+				]]
+			</div>
+		</div>
+		<div class="{{block_prefix}}delivery-pane" id="pickup">
+			<div class="{{block_prefix}}delivery-row  row  is--wrap  is--gutter15">
+				<div class="{{block_prefix}}delivery-cols  cols">
+					<h4 class="{{block_prefix}}delivery-pane-heading">Пункт выдачи:</h4>
+					<div class="{{block_prefix}}delivery-pane-note">
+						302028, г. Орёл, ул. Бульвар Победы 6, 4 этаж, оф. 52
+					</div>
+				</div>
+			</div>
+		</div> 
+	</div>
+	[[azbntple 
+		tpl="/src/block/site/default/basket/panel-order-delivery.html"
+		block_prefix="basket-orders__"
+		block_link="/payment.html"
+		block_link_name="Продолжить"
+	]]
+</div>
