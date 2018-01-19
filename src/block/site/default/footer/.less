@@ -12,7 +12,7 @@
 		padding: 20px 0;
 		overflow: hidden;
 		//border-bottom: 3px solid @white14;
-		@media @media-size-xs-p{text-align: center;}
+		//@media @media-size-xs-p{text-align: center;}
 		@media @media-size-xs-l {
 			font-size: @footer-fs - 2px;
 			line-height: @footer-lh - 6px;
@@ -37,6 +37,9 @@
 		a[href^="tel:"]:hover,
 		a[href^="maito:"]:hover{
 			color: @footer-color;
+			&.is--phone{
+				color: @black;
+			}
 		}
 	}
 	&container{}
@@ -111,6 +114,15 @@
 			font-size: @b-fs - 4;
 			@media @media-size-mdl {font-size: @b-fs - 6;}
 		}*/
+
+	}
+	&contacts-note{
+		padding-top: 5px;
+		font-size: @b-fs - 4;
+		line-height: @b-lh - 10;
+		@media @media-notsmart {
+			text-align: center; 
+		}
 	}
 	&dorohovdesign-row{
 		align-items: center;
