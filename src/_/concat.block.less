@@ -5859,6 +5859,7 @@ blockquote {
 	}
 	&slider-item{
 		width: ~"calc(100vw - 30px)";
+		position: relative;
 		@media @media-size-sm {
 			width: 90vw;
 		}
@@ -5866,6 +5867,56 @@ blockquote {
 			max-width: 1480px;
 			width: 80vw;
 		} 
+	}
+	&slider-poster{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2; 
+		transition: all 0.35s;
+		&.is--active{
+			opacity: 0;
+			z-index: -99;
+		}
+	}
+	&slider-video-play{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 126px;
+		max-height: 126px;
+		min-width: 60px;
+		min-height: 60px;
+		width: 7vw;
+		height: 7vw;
+		svg{display: block;}
+	}
+	&slider-video-block{
+		width: 100%;
+		position: relative;
+		z-index: 1;
+	}
+	&slider-video{
+		width: 100%;
+		max-height: 600px;
+		//
+		opacity: 0;
+		transition: all 0.35s;
+		background-color: @black;
+		@media @media-size-sm-p {
+			max-height: 320px;
+		}
+		@media @media-size-sm-l {
+			max-height: 350px;
+		}
+		@media @media-notsmart{
+			height: 32.75vw;
+		}
+
+		&.is--active{
+			opacity: 1;
+		}
 	}
 	&nav{
 		.slick-list{
