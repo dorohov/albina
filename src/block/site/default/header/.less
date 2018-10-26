@@ -1,11 +1,13 @@
 .header-block__{
 	&block{
+		margin-bottom: 70px;
 		position: relative;
 		@media @media-notsmart {
 			//min-height: 500px;
 			max-height: 800px;
 			height: 41vw;
 		}
+		@media (max-width: 767px) {margin-bottom: 25px;} //изменено добавил
 	}
 	&carousel{}
 	&carousel-control{

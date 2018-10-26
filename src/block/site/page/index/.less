@@ -1,9 +1,14 @@
 .gallery-index__{
 	&block{
 		padding: 40px 0;
-		@media @media-screen {
+		// @media @media-screen {
+		@media (min-width: 768px){//изменено изменил запрос 
 			padding-top: 7vw;
 			padding-bottom: 8.5vw;
+		}
+		@media (max-width: 565px) {//изменено добавил запрос 
+			padding-top: 12vw;
+			padding-bottom: 0;
 		}
 	}
 	&slider-block{

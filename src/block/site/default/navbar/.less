@@ -886,7 +886,87 @@
 			height: 100%;
     		width: 95vw;
 		}
+		&index{
+		position: relative;
+		height: ~"calc(100% - @{navbar-bottom})";
+		padding-left: 15px;
+    	padding-right: 15px;    
+    	margin-right: auto;
+	    margin-left: auto;
+		@media @media-device-lg {
+			background-color: @white;
+		}
+		@media @media-screen-lg {
+			height: 100%;
+			padding: 12px 0;
+			&.is--aside{
+				padding: 0;
+			    max-width: 325px;
+    			margin: 0;
+			}
+		}
+		@media @media-size-md {
+			height: 100%;
+    		width: 95vw;
+		}
 	}
+	}
+
+
+	&dropdown-index{//изменено добавлен класс
+		border: 1px solid red;
+		position: relative;
+		// height: ~"calc(100% - @{navbar-bottom})";
+		padding-left: 15px;
+    	padding-right: 15px;    
+    	margin-right: auto;
+	    margin-left: auto;
+		// @media @media-device-lg {
+		// 	background-color: @white;
+		// }
+		// @media @media-screen-lg {
+		// 	height: 100%;
+		// 	padding: 12px 0;
+		// 	&.is--aside{
+		// 		padding: 0;
+		// 	    max-width: 325px;
+  //   			margin: 0;
+		// 	}
+		// }
+		// @media @media-size-md {
+		// 	height: 100%;
+  //   		width: 95vw;
+		// }
+	// 	&index{
+	// 	border: 1px solid red;//изменено
+	// 	position: relative;
+	// 	height: ~"calc(100% - @{navbar-bottom})";
+	// 	padding-left: 15px;
+ //    	padding-right: 15px;    
+ //    	margin-right: auto;
+	//     margin-left: auto;
+	// 	@media @media-device-lg {
+	// 		background-color: @white;
+	// 	}
+	// 	@media @media-screen-lg {
+	// 		height: 100%;
+	// 		padding: 12px 0;
+	// 		&.is--aside{
+	// 			padding: 0;
+	// 		    max-width: 325px;
+ //    			margin: 0;
+	// 		}
+	// 	}
+	// 	@media @media-size-md {
+	// 		height: 100%;
+ //    		width: 95vw;
+	// 	}
+	// }
+	}
+
+
+
+
 	&dropdown-inner{
 		position: relative;
 		height: 100%;
@@ -896,6 +976,7 @@
 		}
 	}
 	&nav{
+
 		list-style: none;
 		padding: 0px;
 		margin: 0 -(@gutter); 
@@ -916,6 +997,30 @@
 				height: 100%;
 			}
 		}
+	}
+
+	&nav-index{//изменено добавлен класс
+
+		list-style: none;
+		padding: 0px;
+		margin: 0 -(@gutter); 
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		// @media @media-device-lg {
+		// 	//padding: 20px 25px;
+		// }
+		// &.is--aside{
+		// 	justify-content: flex-start;
+		// 	align-content: flex-start;
+		// 	margin: 0;
+		// 	@media @media-screen-lg {				
+		// 		background-color: fadeout(@white-purple, 50%);
+		// 		padding: 30px 0;
+		// 		height: 100%;
+		// 	}
+		// }
 	}
 	&item{
 		margin-bottom: 5px;
@@ -941,7 +1046,88 @@
 			}
 		}
 	}
+	&item-index{//изменено добавлен класс
+		margin-bottom: 5px;
+		padding: 0 @gutter;
+		// @media @media-device-lg {
+		// 	.makeCols(12, 12);
+		// }
+		// &.is--nofixed{
+		// 	@media @media-device-lg {
+		// 		flex-basis: auto;
+		// 		max-width: 100%;
+		// 	}
+		// }
+		// @media @media-screen-lg {
+		// 	margin-bottom: 12px;
+		// }
+		// &:last-child{margin-bottom: 0;}
+		// &.is--aside{
+		// 	padding: 0;
+		// 	@media @media-screen-lg {
+		// 		.makeCols(12, 12);
+		// 		margin-bottom: 0;
+		// 	}
+		// }
+	}
 	&link{
+		position: relative;
+		display: block;
+		padding: 10px 25px;
+		font-size: @b-fs + 2;
+		@media @media-device-lg {display: inline-block;}
+		&.is--nofixed{
+			@media @media-device-lg {display: block;}
+		}
+		span{
+			position: relative;
+			z-index: 2;			
+		}
+		&{color: @b-color;}
+		.navbar-category__item.is--active &,
+		&:hover{
+			//color: @b-color-a;
+		}
+		.navbar-category__item.is--active &{
+			font-weight: 700;
+			cursor: default;
+			text-transform: uppercase;
+			//letter-spacing: 0.6px;
+		}
+		&.is--aside{
+			transition: @trs-site;
+			@media @media-screen-lg {
+				padding: 10px 2vw;
+			}
+			&::after{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: @trs-site;
+				transform-origin: center 0;
+				height: 100%;
+				width: 100%;
+				transform: scaleX(0);
+				transform-origin: 0 center;
+				background-color: @btn-link-bg;
+				@media @media-screen-lg {
+					background-color: @white;
+				}
+			}
+			&.is--active, 
+			&:hover{
+				color: @btn-link-color-hover;
+				&::after{
+					transform: scaleX(1);
+				}
+			}
+			&.is--active{
+				font-weight: 700;
+			}
+		}
+	}
+	&link-index{//изменено добавлен класс
 		position: relative;
 		display: block;
 		padding: 10px 25px;
